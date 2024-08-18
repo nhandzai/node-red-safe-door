@@ -8,6 +8,211 @@
         "env": []
     },
     {
+        "id": "e2226a8017d6f50e",
+        "type": "ui_tab",
+        "name": "SignIn",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "2f1f0fc9ca582f7a",
+        "type": "ui_group",
+        "name": "1",
+        "tab": "e2226a8017d6f50e",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "a792248ed27b3095",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": true,
+        "hidden": false
+    },
+    {
+        "id": "9225fe77df2c33fa",
+        "type": "ui_group",
+        "name": "",
+        "tab": "e2226a8017d6f50e",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "8906270f2889dfd3",
+        "type": "ui_tab",
+        "name": "Sign In & Sign Up",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "1699667209f7a5bd",
+        "type": "ui_group",
+        "name": "Sign up",
+        "tab": "8906270f2889dfd3",
+        "order": 2,
+        "disp": true,
+        "width": "8",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "d7ca3dba9af8a99a",
+        "type": "ui_group",
+        "name": "SignIn",
+        "tab": "8906270f2889dfd3",
+        "order": 1,
+        "disp": true,
+        "width": "8",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "98d4f436e2bef99f",
+        "type": "ui_group",
+        "name": "User Database",
+        "tab": "8906270f2889dfd3",
+        "order": 3,
+        "disp": true,
+        "width": "16",
+        "collapse": true,
+        "className": ""
+    },
+    {
+        "id": "4d5a358e54f11d13",
+        "type": "ui_tab",
+        "name": "Tab 4",
+        "icon": "dashboard",
+        "order": 4
+    },
+    {
+        "id": "c193e5904777d516",
+        "type": "ui_group",
+        "name": "1",
+        "tab": "a792248ed27b3095",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "a422f01d7bd60dad",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "e2226a8017d6f50e",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "573d34c5f0b7483b",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
         "id": "9e84950799a55c87",
         "type": "ui_text_input",
         "z": "12920d928c584941",
@@ -309,7 +514,7 @@
         "type": "function",
         "z": "12920d928c584941",
         "name": "OUTPUT_CLOUD_TK_MK",
-        "func": "// Lấy danh sách TK-MK từ global\nlet TK_MK_LIST = flow.get(\"TK_MK_LIST\") || {};\n\n// Lấy giá trị TK và MK mới từ flow (được lưu từ các input text)\nlet TK_NEW = flow.get(\"TK_NEW\") || \"\";\nlet MK_NEW = flow.get(\"MK_NEW\") || \"\";\n\n// Kiểm tra nếu TK đã tồn tại\nif (TK_MK_LIST[TK_NEW]) {\n    msg.payload = `Tài khoản ${TK_NEW} đã tồn tại!`;\n} else {\n    // Thêm TK và MK mới vào danh sách\n    TK_MK_LIST[TK_NEW] = MK_NEW;\n    // Lưu lại danh sách cập nhật vào global\n    global.set(\"danhSachTKMK\", TK_MK_LIST);\n    msg.payload = `Đã thêm tài khoản: ${TK_NEW} với mật khẩu: ${MK_NEW}`;\n}\n\nreturn msg;\n",
+        "func": "let TK_MK_LIST = flow.get(\"TK_MK_LIST\") || {};\nlet IS_LOGIN = flow.get(\"IS_LOGIN\") || false;\n\nlet TK_NEW = flow.get(\"TK_NEW\") || \"\";\nlet MK_NEW = flow.get(\"MK_NEW\") || \"\";\n\n\nif (TK_MK_LIST[TK_NEW]) {\n    msg.payload = `Tài khoản ${TK_NEW} đã tồn tại!`;\n} else {\n    TK_MK_LIST[TK_NEW] = MK_NEW;\n    global.set(\"danhSachTKMK\", TK_MK_LIST);\n    msg.payload = `Đã thêm tài khoản: ${TK_NEW} với mật khẩu: ${MK_NEW}`;\n}\n\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -352,8 +557,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 520,
-        "y": 580,
+        "x": 600,
+        "y": 600,
         "wires": []
     },
     {
@@ -389,7 +594,7 @@
         "type": "function",
         "z": "12920d928c584941",
         "name": "SHOW_TK_MK",
-        "func": "let TK_MK_LIST = flow.get(\"TK_MK_LIST\") || {};\nlet LIST=\"<b>Danh sách tài khoản - mật khẩu:</b><br>\";\n\nfor (let tk in TK_MK_LIST) {\n    LIST += `Tài khoản: ${tk}, Mật khẩu: ${TK_MK_LIST[tk]}<br>`;\n}\n\nmsg.payload = LIST;\nreturn msg;\n",
+        "func": "let TK_MK_LIST = flow.get(\"TK_MK_LIST\") || {};\nlet LIST=\"<b>Danh sách tài khoản - mật khẩu:</b><br>\";\nlet IS_LOGIN = flow.get(\"IS_LOGIN\") || false;\n\nif(IS_LOGIN == false){\n    return msg\n}\n\nfor (let tk in TK_MK_LIST) {\n    LIST += `Tài khoản: ${tk}, Mật khẩu: ${TK_MK_LIST[tk]}<br>`;\n}\n\nmsg.payload = LIST;\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -516,74 +721,6 @@
         ]
     },
     {
-        "id": "ddaa574ef8d0dcdf",
-        "type": "change",
-        "z": "12920d928c584941",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{\"tabs\":{\"disable\":[\"Home\"]}}",
-                "tot": "json"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 360,
-        "y": 900,
-        "wires": [
-            [
-                "52d27514c8eb1e8c"
-            ]
-        ]
-    },
-    {
-        "id": "52d27514c8eb1e8c",
-        "type": "ui_ui_control",
-        "z": "12920d928c584941",
-        "name": "",
-        "events": "all",
-        "x": 540,
-        "y": 900,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "8e31305daa77f4f9",
-        "type": "inject",
-        "z": "12920d928c584941",
-        "name": "STATER_DISABLE_TAB",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 130,
-        "y": 900,
-        "wires": [
-            [
-                "ddaa574ef8d0dcdf"
-            ]
-        ]
-    },
-    {
         "id": "6e9a3f2fc0e22089",
         "type": "change",
         "z": "12920d928c584941",
@@ -621,65 +758,5 @@
         "wires": [
             []
         ]
-    },
-    {
-        "id": "1699667209f7a5bd",
-        "type": "ui_group",
-        "name": "Sign up",
-        "tab": "8906270f2889dfd3",
-        "order": 2,
-        "disp": true,
-        "width": "8",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "d7ca3dba9af8a99a",
-        "type": "ui_group",
-        "name": "SignIn",
-        "tab": "8906270f2889dfd3",
-        "order": 1,
-        "disp": true,
-        "width": "8",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "98d4f436e2bef99f",
-        "type": "ui_group",
-        "name": "User Database",
-        "tab": "8906270f2889dfd3",
-        "order": 3,
-        "disp": true,
-        "width": "16",
-        "collapse": true,
-        "className": ""
-    },
-    {
-        "id": "c193e5904777d516",
-        "type": "ui_group",
-        "name": "1",
-        "tab": "a792248ed27b3095",
-        "order": 1,
-        "disp": true,
-        "width": "6",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "8906270f2889dfd3",
-        "type": "ui_tab",
-        "name": "Sign In & Sign Up",
-        "icon": "dashboard",
-        "disabled": false,
-        "hidden": false
-    },
-    {
-        "id": "a792248ed27b3095",
-        "type": "ui_tab",
-        "name": "Home",
-        "icon": "dashboard",
-        "disabled": false,
-        "hidden": false
     }
 ]
