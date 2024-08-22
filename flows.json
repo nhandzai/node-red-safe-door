@@ -812,27 +812,6 @@
         "wires": []
     },
     {
-        "id": "3812dd8e44cfc8be",
-        "type": "ui_text",
-        "z": "12920d928c584941",
-        "group": "3713fc2b5b8500f0",
-        "order": 0,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "text",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#000000",
-        "x": 310,
-        "y": 1540,
-        "wires": []
-    },
-    {
         "id": "da0695c148853fce",
         "type": "function",
         "z": "12920d928c584941",
@@ -869,29 +848,6 @@
         "wires": []
     },
     {
-        "id": "234d9d7701804d71",
-        "type": "switch",
-        "z": "12920d928c584941",
-        "name": "",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 470,
-        "y": 1200,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "73ba8083cbe465ed",
         "type": "switch",
         "z": "12920d928c584941",
@@ -919,6 +875,67 @@
             [
                 "da0695c148853fce"
             ],
+            []
+        ]
+    },
+    {
+        "id": "d2013ab2bcbc58ad",
+        "type": "inject",
+        "z": "12920d928c584941",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 180,
+        "y": 1880,
+        "wires": [
+            [
+                "6059a482feb994e8"
+            ]
+        ]
+    },
+    {
+        "id": "6059a482feb994e8",
+        "type": "function",
+        "z": "12920d928c584941",
+        "name": "RESET_WEB",
+        "func": "msg.payload = {\n    tabs: {\n        \"disable\": [\"Settings\",\"Dashboard\"],\n\n    }\n};\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 1880,
+        "wires": [
+            [
+                "e670b449d25b2d53"
+            ]
+        ]
+    },
+    {
+        "id": "e670b449d25b2d53",
+        "type": "ui_ui_control",
+        "z": "12920d928c584941",
+        "name": "",
+        "events": "all",
+        "x": 520,
+        "y": 1880,
+        "wires": [
             []
         ]
     },
@@ -1037,17 +1054,6 @@
         "tab": "27133f1f04c8b028",
         "order": 1,
         "disp": false,
-        "width": "6",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "3713fc2b5b8500f0",
-        "type": "ui_group",
-        "name": "Dashboard1",
-        "tab": "",
-        "order": 1,
-        "disp": true,
         "width": "6",
         "collapse": false,
         "className": ""
