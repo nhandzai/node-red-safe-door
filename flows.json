@@ -46,7 +46,7 @@
         ],
         "x": 94,
         "y": 759,
-        "w": 612,
+        "w": 592,
         "h": 82
     },
     {
@@ -62,8 +62,8 @@
             "e2ce7e37bde2dbb5",
             "f42be339ca3a9700",
             "d6ba79a78081c279",
-            "6e9a3f2fc0e22089",
-            "27b57e1bd7d71ddb"
+            "27b57e1bd7d71ddb",
+            "82a44cbb855cdf3c"
         ],
         "x": 94,
         "y": 359,
@@ -250,7 +250,7 @@
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
-        "initialize": "let TK_MK_LIST = {\n    \"123\": \"111\",\n    \"234\": \"222\",\n    \"456\": \"333\"\n};\n\nflow.set(\"IS_LOGIN\", false);\nflow.set(\"TK_MK_LIST\", TK_MK_LIST);\n\nreturn msg;\n",
+        "initialize": "let TK_MK_LIST = [\n    {username: \"123\", password: \"111\", role: \"admin\"},\n    {username: \"234\", password: \"222\", role: \"guest\"},\n    {username: \"456\", password: \"333\", role: \"guest\"}\n];\n\nflow.set(\"IS_LOGIN\", false);\nflow.set(\"TK_MK_LIST\", TK_MK_LIST);\n\nreturn msg;\n",
         "finalize": "",
         "libs": [],
         "x": 370,
@@ -380,7 +380,7 @@
         "z": "12920d928c584941",
         "g": "13be58712d45bdd9",
         "name": "SHOW_TK_MK",
-        "func": "let TK_MK_LIST = flow.get(\"TK_MK_LIST\") || {};\nlet LIST=\"<b>Danh sách tài khoản - mật khẩu:</b><br>\";\nlet IS_LOGIN = flow.get(\"IS_LOGIN\") || false;\n\nif(IS_LOGIN == false){\n    return msg\n}\n\nfor (let tk in TK_MK_LIST) {\n    LIST += `Tài khoản: ${tk}, Mật khẩu: ${TK_MK_LIST[tk]}<br>`;\n}\n\nmsg.payload = LIST;\nreturn msg;\n",
+        "func": "let TK_MK_LIST = flow.get(\"TK_MK_LIST\") || {};\n//let LIST=\"<b>Danh sách tài khoản - mật khẩu:</b><br>\";\nlet IS_LOGIN = flow.get(\"IS_LOGIN\") || false;\n\nif(IS_LOGIN == false){\n    return msg\n}\n\n//for (let tk in TK_MK_LIST) {\n//    LIST += `Tài khoản: ${tk}, Mật khẩu: ${TK_MK_LIST[tk]}<br>`;\n//}\n\nvar tableHTML = \"<table border='1'><tr><th>NO</th><th>Username</th><th>Role</th></tr>\";\n\nfor (var i = 0; i < flow.get(\"TK_MK_LIST\").length; i++) {\n    var item = flow.get(\"TK_MK_LIST\")[i];\n    tableHTML += \"<tr><td>\" + (i + 1) + \"</td><td>\" + item.username + \"</td><td>\" + item.role + \"</td></tr>\";\n}\n\ntableHTML += \"</table>\";\n\nmsg.payload = tableHTML;\nreturn msg;\n\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -411,7 +411,7 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
-        "x": 600,
+        "x": 580,
         "y": 800,
         "wires": [
             []
@@ -434,8 +434,7 @@
         "y": 400,
         "wires": [
             [
-                "d6ba79a78081c279",
-                "6e9a3f2fc0e22089"
+                "d6ba79a78081c279"
             ]
         ]
     },
@@ -479,34 +478,6 @@
         ]
     },
     {
-        "id": "6e9a3f2fc0e22089",
-        "type": "change",
-        "z": "12920d928c584941",
-        "g": "e6fe9048638cc085",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{\"tabs\":{\"enable\":[\"Dashboard\"]}}",
-                "tot": "json"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 440,
-        "y": 440,
-        "wires": [
-            [
-                "27b57e1bd7d71ddb"
-            ]
-        ]
-    },
-    {
         "id": "27b57e1bd7d71ddb",
         "type": "ui_ui_control",
         "z": "12920d928c584941",
@@ -530,14 +501,14 @@
         "name": "",
         "label": "Door Status",
         "format": "{{msg.payload}}",
-        "layout": "col-center",
+        "layout": "row-spread",
         "className": "",
         "style": false,
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 230,
-        "y": 1000,
+        "x": 390,
+        "y": 960,
         "wires": []
     },
     {
@@ -570,42 +541,42 @@
         "id": "5201ecc8045b09fc",
         "type": "ui_text",
         "z": "12920d928c584941",
-        "group": "1df1496c38736d2e",
+        "group": "c193e5904777d516",
         "order": 2,
         "width": 0,
         "height": 0,
         "name": "",
         "label": "People Detected",
         "format": "{{msg.payload}}",
-        "layout": "col-center",
+        "layout": "row-right",
         "className": "",
         "style": false,
         "font": "",
         "fontSize": 16,
         "color": "#000000",
         "x": 250,
-        "y": 1060,
+        "y": 1280,
         "wires": []
     },
     {
         "id": "289b0a913e5a7c1c",
         "type": "ui_text",
         "z": "12920d928c584941",
-        "group": "c193e5904777d516",
+        "group": "1df1496c38736d2e",
         "order": 2,
         "width": 0,
         "height": 0,
         "name": "",
         "label": "Door Light",
         "format": "{{msg.payload}}",
-        "layout": "col-center",
+        "layout": "row-right",
         "className": "",
         "style": false,
         "font": "",
         "fontSize": 16,
         "color": "#000000",
         "x": 230,
-        "y": 1120,
+        "y": 1220,
         "wires": []
     },
     {
@@ -619,14 +590,14 @@
         "name": "",
         "label": "Fire Sensor",
         "format": "{{msg.payload}}",
-        "layout": "col-center",
+        "layout": "row-right",
         "className": "",
         "style": false,
         "font": "",
         "fontSize": 16,
         "color": "#000000",
         "x": 230,
-        "y": 1180,
+        "y": 1340,
         "wires": []
     },
     {
@@ -635,7 +606,7 @@
         "z": "12920d928c584941",
         "g": "315983a64646b7fb",
         "name": "CHECK_TK_MK",
-        "func": "var TK = flow.get('TK') || '';  \nvar MK = flow.get('MK') || '';  \nvar TK_MK_LIST = flow.get(\"TK_MK_LIST\") || {};\n\nif (TK_MK_LIST[TK] && TK_MK_LIST[TK] === MK) {\n    flow.set(\"IS_LOGIN\", true);\n    msg.payload = \"Đăng nhập thành công!\";\n} else {\n    flow.set(\"IS_LOGIN\", false);\n    msg.payload = \"Tài khoản hoặc mật khẩu không chính xác!\";\n}\n\n\nreturn msg;",
+        "func": "var TK = flow.get('TK') || '';\nvar MK = flow.get('MK') || '';\nvar TK_MK_LIST = flow.get(\"TK_MK_LIST\") || [];\n\nvar user = TK_MK_LIST.find(function(user) {\n    return user.username === TK && user.password === MK;\n});\n\nif (user) {\n    flow.set(\"IS_LOGIN\", true);\n    flow.set(\"role\", user.role); \n    msg.payload = \"Đăng nhập thành công!\";\n} else {\n    flow.set(\"IS_LOGIN\", false);\n    flow.set(\"role\", \"\"); \n    msg.payload = \"Tài khoản hoặc mật khẩu không chính xác!\";\n}\n\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -647,7 +618,8 @@
         "wires": [
             [
                 "e2ce7e37bde2dbb5",
-                "52d6cd8ffcda6d72"
+                "52d6cd8ffcda6d72",
+                "82a44cbb855cdf3c"
             ]
         ]
     },
@@ -699,6 +671,256 @@
         "x": 630,
         "y": 260,
         "wires": []
+    },
+    {
+        "id": "deaf4e63997158fd",
+        "type": "ui_chart",
+        "z": "12920d928c584941",
+        "name": "",
+        "group": "d1989f2e67c75bbb",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "label": "Opens per day",
+        "chartType": "bar",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": true,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 240,
+        "y": 1440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "40935547c75831a2",
+        "type": "mqtt in",
+        "z": "12920d928c584941",
+        "name": "",
+        "topic": "/22127010/flag/doorIsClosed",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "fd12eae5430e069a",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 140,
+        "y": 960,
+        "wires": [
+            [
+                "0ba661f3d4d164d9",
+                "73ba8083cbe465ed"
+            ]
+        ]
+    },
+    {
+        "id": "82a44cbb855cdf3c",
+        "type": "function",
+        "z": "12920d928c584941",
+        "g": "e6fe9048638cc085",
+        "name": "CHECK_ABLE_TAB",
+        "func": "let IS_LOGIN = flow.get(\"IS_LOGIN\") || false;\nlet role = flow.get(\"role\") || ''; \n\nif (IS_LOGIN) {\n    msg.payload = {\n        tabs: {\n            \"enable\": [\"Dashboard\"],\n        }\n    };\n\n    if (role === \"admin\") {\n        msg.payload.tabs.enable.push(\"Settings\"); \n    }\n    else\n    {\n    msg.payload = {\n        tabs: {\n            \"disable\": [\"Settings\"]\n        }\n    };\n    }\n}\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 240,
+        "y": 440,
+        "wires": [
+            [
+                "27b57e1bd7d71ddb"
+            ]
+        ]
+    },
+    {
+        "id": "3e0be98385a69fe4",
+        "type": "ui_switch",
+        "z": "12920d928c584941",
+        "name": "",
+        "label": "Safety Mode",
+        "tooltip": "",
+        "group": "96e9bba7657a895c",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 230,
+        "y": 1600,
+        "wires": [
+            [
+                "9db4076cf61c59a0"
+            ]
+        ]
+    },
+    {
+        "id": "9db4076cf61c59a0",
+        "type": "mqtt out",
+        "z": "12920d928c584941",
+        "name": "",
+        "topic": "/22127010/flag/safetyMode",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "fd12eae5430e069a",
+        "x": 480,
+        "y": 1600,
+        "wires": []
+    },
+    {
+        "id": "3812dd8e44cfc8be",
+        "type": "ui_text",
+        "z": "12920d928c584941",
+        "group": "3713fc2b5b8500f0",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "text",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 310,
+        "y": 1540,
+        "wires": []
+    },
+    {
+        "id": "da0695c148853fce",
+        "type": "function",
+        "z": "12920d928c584941",
+        "name": "GET DATE",
+        "func": "\nvar d = new Date();\nvar day = d.getDate();\nvar month = d.getMonth();\nvar year = d.getFullYear();\nif (day <= 9)\n    day = \"0\" + day;\nif (month <= 9)\n    month = \"0\" + (month + 1);\nvar date_out = day + \"/\" + month + \"/\" + year;\nmsg.payload = date_out\n\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 250,
+        "y": 1100,
+        "wires": [
+            [
+                "ff12afbdce829a0f"
+            ]
+        ]
+    },
+    {
+        "id": "ff12afbdce829a0f",
+        "type": "debug",
+        "z": "12920d928c584941",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 420,
+        "y": 1020,
+        "wires": []
+    },
+    {
+        "id": "234d9d7701804d71",
+        "type": "switch",
+        "z": "12920d928c584941",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 470,
+        "y": 1200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "73ba8083cbe465ed",
+        "type": "switch",
+        "z": "12920d928c584941",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "OPENED",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "CLOSED",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 90,
+        "y": 1100,
+        "wires": [
+            [
+                "da0695c148853fce"
+            ],
+            []
+        ]
     },
     {
         "id": "1699667209f7a5bd",
@@ -767,10 +989,75 @@
         "className": ""
     },
     {
+        "id": "d1989f2e67c75bbb",
+        "type": "ui_group",
+        "name": "3",
+        "tab": "a792248ed27b3095",
+        "order": 4,
+        "disp": false,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "fd12eae5430e069a",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "test.mosquitto.org",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "96e9bba7657a895c",
+        "type": "ui_group",
+        "name": "1",
+        "tab": "27133f1f04c8b028",
+        "order": 1,
+        "disp": false,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "3713fc2b5b8500f0",
+        "type": "ui_group",
+        "name": "Dashboard1",
+        "tab": "",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
         "id": "8906270f2889dfd3",
         "type": "ui_tab",
         "name": "Sign In & Sign Up",
         "icon": "dashboard",
+        "order": 2,
         "disabled": false,
         "hidden": false
     },
@@ -779,6 +1066,16 @@
         "type": "ui_tab",
         "name": "Dashboard",
         "icon": "dashboard",
+        "order": 1,
+        "disabled": true,
+        "hidden": false
+    },
+    {
+        "id": "27133f1f04c8b028",
+        "type": "ui_tab",
+        "name": "Settings",
+        "icon": "dashboard",
+        "order": 3,
         "disabled": true,
         "hidden": false
     }
