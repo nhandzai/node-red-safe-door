@@ -8,211 +8,6 @@
         "env": []
     },
     {
-        "id": "e2226a8017d6f50e",
-        "type": "ui_tab",
-        "name": "SignIn",
-        "icon": "dashboard",
-        "disabled": false,
-        "hidden": false
-    },
-    {
-        "id": "2f1f0fc9ca582f7a",
-        "type": "ui_group",
-        "name": "1",
-        "tab": "e2226a8017d6f50e",
-        "order": 1,
-        "disp": true,
-        "width": "6",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "a792248ed27b3095",
-        "type": "ui_tab",
-        "name": "Home",
-        "icon": "dashboard",
-        "disabled": true,
-        "hidden": false
-    },
-    {
-        "id": "9225fe77df2c33fa",
-        "type": "ui_group",
-        "name": "",
-        "tab": "e2226a8017d6f50e",
-        "order": 2,
-        "disp": true,
-        "width": "6",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "8906270f2889dfd3",
-        "type": "ui_tab",
-        "name": "Sign In & Sign Up",
-        "icon": "dashboard",
-        "disabled": false,
-        "hidden": false
-    },
-    {
-        "id": "1699667209f7a5bd",
-        "type": "ui_group",
-        "name": "Sign up",
-        "tab": "8906270f2889dfd3",
-        "order": 2,
-        "disp": true,
-        "width": "8",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "d7ca3dba9af8a99a",
-        "type": "ui_group",
-        "name": "SignIn",
-        "tab": "8906270f2889dfd3",
-        "order": 1,
-        "disp": true,
-        "width": "8",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "98d4f436e2bef99f",
-        "type": "ui_group",
-        "name": "User Database",
-        "tab": "8906270f2889dfd3",
-        "order": 3,
-        "disp": true,
-        "width": "16",
-        "collapse": true,
-        "className": ""
-    },
-    {
-        "id": "4d5a358e54f11d13",
-        "type": "ui_tab",
-        "name": "Tab 4",
-        "icon": "dashboard",
-        "order": 4
-    },
-    {
-        "id": "c193e5904777d516",
-        "type": "ui_group",
-        "name": "1",
-        "tab": "a792248ed27b3095",
-        "order": 1,
-        "disp": true,
-        "width": "6",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "a422f01d7bd60dad",
-        "type": "ui_group",
-        "name": "Default",
-        "tab": "e2226a8017d6f50e",
-        "order": 3,
-        "disp": true,
-        "width": "6",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "573d34c5f0b7483b",
-        "type": "ui_base",
-        "theme": {
-            "name": "theme-light",
-            "lightTheme": {
-                "default": "#0094CE",
-                "baseColor": "#0094CE",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
-                "edited": true,
-                "reset": false
-            },
-            "darkTheme": {
-                "default": "#097479",
-                "baseColor": "#097479",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
-                "edited": false
-            },
-            "customTheme": {
-                "name": "Untitled Theme 1",
-                "default": "#4B7930",
-                "baseColor": "#4B7930",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
-            },
-            "themeState": {
-                "base-color": {
-                    "default": "#0094CE",
-                    "value": "#0094CE",
-                    "edited": false
-                },
-                "page-titlebar-backgroundColor": {
-                    "value": "#0094CE",
-                    "edited": false
-                },
-                "page-backgroundColor": {
-                    "value": "#fafafa",
-                    "edited": false
-                },
-                "page-sidebar-backgroundColor": {
-                    "value": "#ffffff",
-                    "edited": false
-                },
-                "group-textColor": {
-                    "value": "#1bbfff",
-                    "edited": false
-                },
-                "group-borderColor": {
-                    "value": "#ffffff",
-                    "edited": false
-                },
-                "group-backgroundColor": {
-                    "value": "#ffffff",
-                    "edited": false
-                },
-                "widget-textColor": {
-                    "value": "#111111",
-                    "edited": false
-                },
-                "widget-backgroundColor": {
-                    "value": "#0094ce",
-                    "edited": false
-                },
-                "widget-borderColor": {
-                    "value": "#ffffff",
-                    "edited": false
-                },
-                "base-font": {
-                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
-                }
-            },
-            "angularTheme": {
-                "primary": "indigo",
-                "accents": "blue",
-                "warn": "red",
-                "background": "grey",
-                "palette": "light"
-            }
-        },
-        "site": {
-            "name": "Node-RED Dashboard",
-            "hideToolbar": "false",
-            "allowSwipe": "false",
-            "lockMenu": "false",
-            "allowTempTheme": "true",
-            "dateFormat": "DD/MM/YYYY",
-            "sizes": {
-                "sx": 48,
-                "sy": 48,
-                "gx": 6,
-                "gy": 6,
-                "cx": 6,
-                "cy": 6,
-                "px": 0,
-                "py": 0
-            }
-        }
-    },
-    {
         "id": "9e84950799a55c87",
         "type": "ui_text_input",
         "z": "12920d928c584941",
@@ -368,9 +163,8 @@
         "y": 260,
         "wires": [
             [
-                "0af9c7810bd81245",
-                "ebf454e20c5d90d2",
-                "e2ce7e37bde2dbb5"
+                "e2ce7e37bde2dbb5",
+                "52d6cd8ffcda6d72"
             ]
         ]
     },
@@ -401,27 +195,6 @@
                 "8f65972edd19c474"
             ]
         ]
-    },
-    {
-        "id": "0af9c7810bd81245",
-        "type": "ui_text",
-        "z": "12920d928c584941",
-        "group": "98d4f436e2bef99f",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "text",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#000000",
-        "x": 450,
-        "y": 260,
-        "wires": []
     },
     {
         "id": "901b7f2587c8d9fe",
@@ -456,9 +229,7 @@
         "x": 400,
         "y": 420,
         "wires": [
-            [
-                "2953d0a586719e86"
-            ]
+            []
         ]
     },
     {
@@ -476,9 +247,7 @@
         "x": 400,
         "y": 480,
         "wires": [
-            [
-                "2953d0a586719e86"
-            ]
+            []
         ]
     },
     {
@@ -524,42 +293,8 @@
         "x": 260,
         "y": 580,
         "wires": [
-            [
-                "2953d0a586719e86"
-            ]
+            []
         ]
-    },
-    {
-        "id": "ebf454e20c5d90d2",
-        "type": "debug",
-        "z": "12920d928c584941",
-        "name": "debug 1",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 460,
-        "y": 340,
-        "wires": []
-    },
-    {
-        "id": "2953d0a586719e86",
-        "type": "debug",
-        "z": "12920d928c584941",
-        "name": "debug 2",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 600,
-        "y": 600,
-        "wires": []
     },
     {
         "id": "20ee0c92f39e2529",
@@ -614,7 +349,7 @@
         "type": "ui_template",
         "z": "12920d928c584941",
         "group": "98d4f436e2bef99f",
-        "name": "",
+        "name": "SHOW_TK_MK",
         "order": 3,
         "width": "16",
         "height": "10",
@@ -624,7 +359,7 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
-        "x": 480,
+        "x": 500,
         "y": 700,
         "wires": [
             []
@@ -635,7 +370,7 @@
         "type": "function",
         "z": "12920d928c584941",
         "name": "CHECK_CHANGE_TAB",
-        "func": "let IS_LOGIN = flow.get(\"IS_LOGIN\") || false;\n\nif (IS_LOGIN) {\n    msg.payload = {tab: \"Home\"};\n} else {\n    msg.payload = {tab: \"Login\"};\n}\n\nreturn msg;\n",
+        "func": "let IS_LOGIN = flow.get(\"IS_LOGIN\") || false;\n\nif (IS_LOGIN) {\n    msg.payload = {tab: \"Dashboard\"};\n} else {\n    msg.payload = {tab: \"Login\"};\n}\n\nreturn msg;\n",
         "outputs": 1,
         "timeout": "0",
         "noerr": 0,
@@ -687,9 +422,9 @@
         "id": "f42be339ca3a9700",
         "type": "ui_ui_control",
         "z": "12920d928c584941",
-        "name": "",
+        "name": "SWITCH_TAB",
         "events": "all",
-        "x": 580,
+        "x": 600,
         "y": 780,
         "wires": [
             []
@@ -730,7 +465,7 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "{\"tabs\":{\"enable\":[\"Home\"]}}",
+                "to": "{\"tabs\":{\"enable\":[\"Dashboard\"]}}",
                 "tot": "json"
             }
         ],
@@ -751,12 +486,91 @@
         "id": "27b57e1bd7d71ddb",
         "type": "ui_ui_control",
         "z": "12920d928c584941",
-        "name": "",
+        "name": "ENABLE_TAB",
         "events": "all",
-        "x": 580,
+        "x": 600,
         "y": 820,
         "wires": [
             []
         ]
+    },
+    {
+        "id": "52d6cd8ffcda6d72",
+        "type": "ui_toast",
+        "z": "12920d928c584941",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 510,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "1699667209f7a5bd",
+        "type": "ui_group",
+        "name": "Sign In",
+        "tab": "8906270f2889dfd3",
+        "order": 2,
+        "disp": true,
+        "width": "8",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "d7ca3dba9af8a99a",
+        "type": "ui_group",
+        "name": "Sign Up",
+        "tab": "8906270f2889dfd3",
+        "order": 1,
+        "disp": true,
+        "width": "8",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "98d4f436e2bef99f",
+        "type": "ui_group",
+        "name": "User Database",
+        "tab": "8906270f2889dfd3",
+        "order": 3,
+        "disp": true,
+        "width": "16",
+        "collapse": true,
+        "className": ""
+    },
+    {
+        "id": "c193e5904777d516",
+        "type": "ui_group",
+        "name": "1",
+        "tab": "a792248ed27b3095",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "8906270f2889dfd3",
+        "type": "ui_tab",
+        "name": "Sign In & Sign Up",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "a792248ed27b3095",
+        "type": "ui_tab",
+        "name": "Dashboard",
+        "icon": "dashboard",
+        "disabled": true,
+        "hidden": false
     }
 ]
