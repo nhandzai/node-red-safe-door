@@ -8,9 +8,97 @@
         "env": []
     },
     {
+        "id": "063a305f48ec89cd",
+        "type": "group",
+        "z": "12920d928c584941",
+        "name": "Sign Up Handle",
+        "style": {
+            "label": true,
+            "stroke": "#bfbfbf",
+            "color": "#ff0000"
+        },
+        "nodes": [
+            "bc6fa255a8479cde",
+            "f1e194da448dd9c2",
+            "8d109ebe53881ce8",
+            "14fb12c22f493dac",
+            "bdc661eaf5b3f902",
+            "2cfec57726334544"
+        ],
+        "x": 94,
+        "y": 499,
+        "w": 532,
+        "h": 242
+    },
+    {
+        "id": "13be58712d45bdd9",
+        "type": "group",
+        "z": "12920d928c584941",
+        "name": "Show Accounts Info",
+        "style": {
+            "label": true,
+            "color": "#ff0000"
+        },
+        "nodes": [
+            "20ee0c92f39e2529",
+            "b0263f1a0ca4121d",
+            "6d74a49774e28ac7"
+        ],
+        "x": 94,
+        "y": 759,
+        "w": 612,
+        "h": 82
+    },
+    {
+        "id": "e6fe9048638cc085",
+        "type": "group",
+        "z": "12920d928c584941",
+        "name": "Change tab after login ",
+        "style": {
+            "label": true,
+            "color": "#ff0000"
+        },
+        "nodes": [
+            "e2ce7e37bde2dbb5",
+            "f42be339ca3a9700",
+            "d6ba79a78081c279",
+            "6e9a3f2fc0e22089",
+            "27b57e1bd7d71ddb"
+        ],
+        "x": 94,
+        "y": 359,
+        "w": 652,
+        "h": 122
+    },
+    {
+        "id": "315983a64646b7fb",
+        "type": "group",
+        "z": "12920d928c584941",
+        "name": "Sign In Handle",
+        "style": {
+            "label": true,
+            "color": "#ff0000"
+        },
+        "nodes": [
+            "9e84950799a55c87",
+            "905af802a76d17c6",
+            "5196078d05b1a3ca",
+            "d7b784e823df2089",
+            "901b7f2587c8d9fe",
+            "8f65972edd19c474",
+            "7784d5df8b5f2b53",
+            "52d6cd8ffcda6d72"
+        ],
+        "x": 94,
+        "y": 19,
+        "w": 652,
+        "h": 282
+    },
+    {
         "id": "9e84950799a55c87",
         "type": "ui_text_input",
         "z": "12920d928c584941",
+        "g": "315983a64646b7fb",
         "name": "",
         "label": "Username",
         "tooltip": "",
@@ -25,7 +113,7 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 210,
+        "x": 330,
         "y": 120,
         "wires": [
             [
@@ -37,6 +125,7 @@
         "id": "905af802a76d17c6",
         "type": "ui_text_input",
         "z": "12920d928c584941",
+        "g": "315983a64646b7fb",
         "name": "",
         "label": "Password",
         "tooltip": "",
@@ -51,7 +140,7 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 200,
+        "x": 320,
         "y": 180,
         "wires": [
             [
@@ -63,6 +152,7 @@
         "id": "bc6fa255a8479cde",
         "type": "ui_text_input",
         "z": "12920d928c584941",
+        "g": "063a305f48ec89cd",
         "name": "",
         "label": "Username",
         "tooltip": "",
@@ -77,8 +167,8 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 190,
-        "y": 420,
+        "x": 310,
+        "y": 540,
         "wires": [
             [
                 "8d109ebe53881ce8"
@@ -89,6 +179,7 @@
         "id": "f1e194da448dd9c2",
         "type": "ui_text_input",
         "z": "12920d928c584941",
+        "g": "063a305f48ec89cd",
         "name": "",
         "label": "Password",
         "tooltip": "",
@@ -103,8 +194,8 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 180,
-        "y": 480,
+        "x": 300,
+        "y": 600,
         "wires": [
             [
                 "14fb12c22f493dac"
@@ -115,6 +206,7 @@
         "id": "5196078d05b1a3ca",
         "type": "function",
         "z": "12920d928c584941",
+        "g": "315983a64646b7fb",
         "name": "LOGIN_TK",
         "func": "var value = msg.payload\n\nflow.set(\"TK\",value)\n\nmsg.payload = value\n\nreturn msg;",
         "outputs": 1,
@@ -123,7 +215,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 390,
+        "x": 510,
         "y": 120,
         "wires": [
             []
@@ -133,6 +225,7 @@
         "id": "d7b784e823df2089",
         "type": "function",
         "z": "12920d928c584941",
+        "g": "315983a64646b7fb",
         "name": "LOGIN_MK",
         "func": "var value = msg.payload\n\nflow.set(\"MK\",value)\n\n\nreturn msg;",
         "outputs": 1,
@@ -141,75 +234,27 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 390,
+        "x": 510,
         "y": 180,
         "wires": [
             []
         ]
     },
     {
-        "id": "8f65972edd19c474",
-        "type": "function",
-        "z": "12920d928c584941",
-        "name": "CHECK_TK_MK",
-        "func": "var TK = flow.get('TK') || '';  \nvar MK = flow.get('MK') || '';  \nvar TK_MK_LIST = flow.get(\"TK_MK_LIST\") || {};\n\nif (TK_MK_LIST[TK] && TK_MK_LIST[TK] === MK) {\n    flow.set(\"IS_LOGIN\", true);\n    msg.payload = \"Đăng nhập thành công!\";\n} else {\n    flow.set(\"IS_LOGIN\", false);\n    msg.payload = \"Tài khoản hoặc mật khẩu không chính xác!\";\n}\n\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 220,
-        "y": 260,
-        "wires": [
-            [
-                "e2ce7e37bde2dbb5",
-                "52d6cd8ffcda6d72"
-            ]
-        ]
-    },
-    {
-        "id": "7784d5df8b5f2b53",
-        "type": "ui_button",
-        "z": "12920d928c584941",
-        "name": "",
-        "group": "1699667209f7a5bd",
-        "order": 3,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "label": "button",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "topic",
-        "topicType": "msg",
-        "x": 50,
-        "y": 240,
-        "wires": [
-            [
-                "8f65972edd19c474"
-            ]
-        ]
-    },
-    {
         "id": "901b7f2587c8d9fe",
         "type": "function",
         "z": "12920d928c584941",
+        "g": "315983a64646b7fb",
         "name": "INPUT_CLOUD_TK_MK",
-        "func": "let TK_MK_LIST = {\n    \"123\": \"111\",\n    \"234\": \"222\",\n    \"456\": \"333\"\n};\n\nflow.set(\"IS_LOGIN\", false);\nflow.set(\"TK_MK_LIST\", TK_MK_LIST);\n\nreturn msg;\n",
+        "func": "\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
-        "initialize": "let TK_MK_LIST = {\n    \"123\": \"111\",\n    \"234\": \"222\",\n    \"456\": \"333\"\n};\n\nflow.set(\"TK_MK_LIST\", TK_MK_LIST);\n\nreturn msg;\n",
+        "initialize": "let TK_MK_LIST = {\n    \"123\": \"111\",\n    \"234\": \"222\",\n    \"456\": \"333\"\n};\n\nflow.set(\"IS_LOGIN\", false);\nflow.set(\"TK_MK_LIST\", TK_MK_LIST);\n\nreturn msg;\n",
         "finalize": "",
         "libs": [],
-        "x": 250,
-        "y": 340,
+        "x": 370,
+        "y": 60,
         "wires": [
             []
         ]
@@ -218,6 +263,7 @@
         "id": "8d109ebe53881ce8",
         "type": "function",
         "z": "12920d928c584941",
+        "g": "063a305f48ec89cd",
         "name": "SIGN_UP_TK",
         "func": "var value = msg.payload\n\nflow.set(\"TK_NEW\",value)\n\nmsg.payload = value\n\nreturn msg;",
         "outputs": 1,
@@ -226,8 +272,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 400,
-        "y": 420,
+        "x": 520,
+        "y": 540,
         "wires": [
             []
         ]
@@ -236,6 +282,7 @@
         "id": "14fb12c22f493dac",
         "type": "function",
         "z": "12920d928c584941",
+        "g": "063a305f48ec89cd",
         "name": "SIGN_UP_MK",
         "func": "var value = msg.payload\n\nflow.set(\"MK_NEW\",value)\n\n\nreturn msg;",
         "outputs": 1,
@@ -244,8 +291,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 400,
-        "y": 480,
+        "x": 520,
+        "y": 600,
         "wires": [
             []
         ]
@@ -254,6 +301,7 @@
         "id": "bdc661eaf5b3f902",
         "type": "ui_button",
         "z": "12920d928c584941",
+        "g": "063a305f48ec89cd",
         "name": "",
         "group": "d7ca3dba9af8a99a",
         "order": 3,
@@ -270,8 +318,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 50,
-        "y": 540,
+        "x": 170,
+        "y": 660,
         "wires": [
             [
                 "2cfec57726334544"
@@ -282,16 +330,17 @@
         "id": "2cfec57726334544",
         "type": "function",
         "z": "12920d928c584941",
+        "g": "063a305f48ec89cd",
         "name": "OUTPUT_CLOUD_TK_MK",
-        "func": "let TK_MK_LIST = flow.get(\"TK_MK_LIST\") || {};\nlet IS_LOGIN = flow.get(\"IS_LOGIN\") || false;\n\nlet TK_NEW = flow.get(\"TK_NEW\") || \"\";\nlet MK_NEW = flow.get(\"MK_NEW\") || \"\";\n\n\nif (TK_MK_LIST[TK_NEW]) {\n    msg.payload = `Tài khoản ${TK_NEW} đã tồn tại!`;\n} else {\n    TK_MK_LIST[TK_NEW] = MK_NEW;\n    global.set(\"danhSachTKMK\", TK_MK_LIST);\n    msg.payload = `Đã thêm tài khoản: ${TK_NEW} với mật khẩu: ${MK_NEW}`;\n}\n\nreturn msg;\n",
+        "func": "let TK_MK_LIST = flow.get(\"TK_MK_LIST\") || {};\nlet IS_LOGIN = flow.get(\"IS_LOGIN\") || false;\n\nlet TK_NEW = flow.get(\"TK_NEW\") || \"\";\nlet MK_NEW = flow.get(\"MK_NEW\") || \"\";\n\n\nif (TK_MK_LIST[TK_NEW]) {\n    msg.payload = `Tài khoản ${TK_NEW} đã tồn tại!`;\n} else {\n    TK_MK_LIST[TK_NEW] = MK_NEW;\n    flow.set(\"danhSachTKMK\", TK_MK_LIST);\n    msg.payload = `Đã thêm tài khoản: ${TK_NEW} với mật khẩu: ${MK_NEW}`;\n}\n\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 260,
-        "y": 580,
+        "x": 380,
+        "y": 700,
         "wires": [
             []
         ]
@@ -300,6 +349,7 @@
         "id": "20ee0c92f39e2529",
         "type": "ui_button",
         "z": "12920d928c584941",
+        "g": "13be58712d45bdd9",
         "name": "",
         "group": "98d4f436e2bef99f",
         "order": 2,
@@ -316,8 +366,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 70,
-        "y": 700,
+        "x": 170,
+        "y": 800,
         "wires": [
             [
                 "b0263f1a0ca4121d"
@@ -328,6 +378,7 @@
         "id": "b0263f1a0ca4121d",
         "type": "function",
         "z": "12920d928c584941",
+        "g": "13be58712d45bdd9",
         "name": "SHOW_TK_MK",
         "func": "let TK_MK_LIST = flow.get(\"TK_MK_LIST\") || {};\nlet LIST=\"<b>Danh sách tài khoản - mật khẩu:</b><br>\";\nlet IS_LOGIN = flow.get(\"IS_LOGIN\") || false;\n\nif(IS_LOGIN == false){\n    return msg\n}\n\nfor (let tk in TK_MK_LIST) {\n    LIST += `Tài khoản: ${tk}, Mật khẩu: ${TK_MK_LIST[tk]}<br>`;\n}\n\nmsg.payload = LIST;\nreturn msg;\n",
         "outputs": 1,
@@ -336,8 +387,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 260,
-        "y": 700,
+        "x": 360,
+        "y": 800,
         "wires": [
             [
                 "6d74a49774e28ac7"
@@ -348,6 +399,7 @@
         "id": "6d74a49774e28ac7",
         "type": "ui_template",
         "z": "12920d928c584941",
+        "g": "13be58712d45bdd9",
         "group": "98d4f436e2bef99f",
         "name": "SHOW_TK_MK",
         "order": 3,
@@ -359,8 +411,8 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
-        "x": 500,
-        "y": 700,
+        "x": 600,
+        "y": 800,
         "wires": [
             []
         ]
@@ -369,6 +421,7 @@
         "id": "e2ce7e37bde2dbb5",
         "type": "function",
         "z": "12920d928c584941",
+        "g": "e6fe9048638cc085",
         "name": "CHECK_CHANGE_TAB",
         "func": "let IS_LOGIN = flow.get(\"IS_LOGIN\") || false;\n\nif (IS_LOGIN) {\n    msg.payload = {tab: \"Dashboard\"};\n} else {\n    msg.payload = {tab: \"Login\"};\n}\n\nreturn msg;\n",
         "outputs": 1,
@@ -377,8 +430,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 190,
-        "y": 780,
+        "x": 230,
+        "y": 400,
         "wires": [
             [
                 "d6ba79a78081c279",
@@ -387,45 +440,14 @@
         ]
     },
     {
-        "id": "d3175256f1e1aa8c",
-        "type": "ui_switch",
-        "z": "12920d928c584941",
-        "name": "",
-        "label": "switch",
-        "tooltip": "",
-        "group": "c193e5904777d516",
-        "order": 0,
-        "width": 0,
-        "height": 0,
-        "passthru": true,
-        "decouple": "false",
-        "topic": "topic",
-        "topicType": "msg",
-        "style": "",
-        "onvalue": "true",
-        "onvalueType": "bool",
-        "onicon": "",
-        "oncolor": "",
-        "offvalue": "false",
-        "offvalueType": "bool",
-        "officon": "",
-        "offcolor": "",
-        "animate": false,
-        "className": "",
-        "x": 210,
-        "y": 1000,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "f42be339ca3a9700",
         "type": "ui_ui_control",
         "z": "12920d928c584941",
+        "g": "e6fe9048638cc085",
         "name": "SWITCH_TAB",
         "events": "all",
-        "x": 600,
-        "y": 780,
+        "x": 640,
+        "y": 400,
         "wires": [
             []
         ]
@@ -434,6 +456,7 @@
         "id": "d6ba79a78081c279",
         "type": "delay",
         "z": "12920d928c584941",
+        "g": "e6fe9048638cc085",
         "name": "",
         "pauseType": "delay",
         "timeout": "2",
@@ -447,8 +470,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 400,
-        "y": 780,
+        "x": 440,
+        "y": 400,
         "wires": [
             [
                 "f42be339ca3a9700"
@@ -459,6 +482,7 @@
         "id": "6e9a3f2fc0e22089",
         "type": "change",
         "z": "12920d928c584941",
+        "g": "e6fe9048638cc085",
         "name": "",
         "rules": [
             {
@@ -474,8 +498,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 400,
-        "y": 820,
+        "x": 440,
+        "y": 440,
         "wires": [
             [
                 "27b57e1bd7d71ddb"
@@ -486,18 +510,181 @@
         "id": "27b57e1bd7d71ddb",
         "type": "ui_ui_control",
         "z": "12920d928c584941",
+        "g": "e6fe9048638cc085",
         "name": "ENABLE_TAB",
         "events": "all",
-        "x": 600,
-        "y": 820,
+        "x": 640,
+        "y": 440,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "0ba661f3d4d164d9",
+        "type": "ui_text",
+        "z": "12920d928c584941",
+        "group": "1df1496c38736d2e",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Door Status",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 230,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "d8816866e57c06b3",
+        "type": "ui_button",
+        "z": "12920d928c584941",
+        "name": "",
+        "group": "4dd54fb92a77b2e4",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "OPEN DOOR",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 240,
+        "y": 920,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5201ecc8045b09fc",
+        "type": "ui_text",
+        "z": "12920d928c584941",
+        "group": "1df1496c38736d2e",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "People Detected",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 250,
+        "y": 1060,
+        "wires": []
+    },
+    {
+        "id": "289b0a913e5a7c1c",
+        "type": "ui_text",
+        "z": "12920d928c584941",
+        "group": "c193e5904777d516",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Door Light",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 230,
+        "y": 1120,
+        "wires": []
+    },
+    {
+        "id": "7cc0802acb3c5992",
+        "type": "ui_text",
+        "z": "12920d928c584941",
+        "group": "c193e5904777d516",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Fire Sensor",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 230,
+        "y": 1180,
+        "wires": []
+    },
+    {
+        "id": "8f65972edd19c474",
+        "type": "function",
+        "z": "12920d928c584941",
+        "g": "315983a64646b7fb",
+        "name": "CHECK_TK_MK",
+        "func": "var TK = flow.get('TK') || '';  \nvar MK = flow.get('MK') || '';  \nvar TK_MK_LIST = flow.get(\"TK_MK_LIST\") || {};\n\nif (TK_MK_LIST[TK] && TK_MK_LIST[TK] === MK) {\n    flow.set(\"IS_LOGIN\", true);\n    msg.payload = \"Đăng nhập thành công!\";\n} else {\n    flow.set(\"IS_LOGIN\", false);\n    msg.payload = \"Tài khoản hoặc mật khẩu không chính xác!\";\n}\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 260,
+        "wires": [
+            [
+                "e2ce7e37bde2dbb5",
+                "52d6cd8ffcda6d72"
+            ]
+        ]
+    },
+    {
+        "id": "7784d5df8b5f2b53",
+        "type": "ui_button",
+        "z": "12920d928c584941",
+        "g": "315983a64646b7fb",
+        "name": "",
+        "group": "1699667209f7a5bd",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "button",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 170,
+        "y": 240,
+        "wires": [
+            [
+                "8f65972edd19c474"
+            ]
         ]
     },
     {
         "id": "52d6cd8ffcda6d72",
         "type": "ui_toast",
         "z": "12920d928c584941",
+        "g": "315983a64646b7fb",
         "position": "top right",
         "displayTime": "3",
         "highlight": "",
@@ -509,7 +696,7 @@
         "className": "",
         "topic": "",
         "name": "",
-        "x": 510,
+        "x": 630,
         "y": 260,
         "wires": []
     },
@@ -547,12 +734,34 @@
         "className": ""
     },
     {
-        "id": "c193e5904777d516",
+        "id": "1df1496c38736d2e",
         "type": "ui_group",
         "name": "1",
         "tab": "a792248ed27b3095",
         "order": 1,
-        "disp": true,
+        "disp": false,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "4dd54fb92a77b2e4",
+        "type": "ui_group",
+        "name": "BUTTON_OPEN_DOOR",
+        "tab": "a792248ed27b3095",
+        "order": 3,
+        "disp": false,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "c193e5904777d516",
+        "type": "ui_group",
+        "name": "2",
+        "tab": "a792248ed27b3095",
+        "order": 2,
+        "disp": false,
         "width": "6",
         "collapse": false,
         "className": ""
