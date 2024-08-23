@@ -125,6 +125,344 @@
         "h": 282
     },
     {
+        "id": "5a79cac994192a0d",
+        "type": "group",
+        "z": "12920d928c584941",
+        "name": "Out put flag",
+        "style": {
+            "label": true,
+            "color": "#ff0000"
+        },
+        "nodes": [
+            "3e0be98385a69fe4",
+            "9db4076cf61c59a0",
+            "9e409b48861ea81a",
+            "1af28acc72ef52f7",
+            "e8936a700e218380",
+            "7e895bdc382ad0b1",
+            "725a8692a3d38c1d",
+            "2b6e2a5b74ec131f",
+            "cdca7af9e89c7cdf",
+            "df03531fa90a0596",
+            "f40f13a2b12b7331",
+            "f2917dac1ca95c79",
+            "55ed79fa6a05e444"
+        ],
+        "x": 14,
+        "y": 1899,
+        "w": 792,
+        "h": 382
+    },
+    {
+        "id": "3da94f65c707e23d",
+        "type": "group",
+        "z": "12920d928c584941",
+        "name": "Input flag",
+        "style": {
+            "label": true,
+            "color": "#ff0000"
+        },
+        "nodes": [
+            "0ba661f3d4d164d9",
+            "d8816866e57c06b3",
+            "5201ecc8045b09fc",
+            "289b0a913e5a7c1c",
+            "7cc0802acb3c5992",
+            "deaf4e63997158fd",
+            "40935547c75831a2",
+            "da0695c148853fce",
+            "ff12afbdce829a0f",
+            "73ba8083cbe465ed",
+            "98c3a310f501f539",
+            "4e9b55b641c9bbd0",
+            "8e3650fadfb45fc1",
+            "1e1fd57e8242b321",
+            "62d79664ec0a2357",
+            "b9740c3e0f22029d",
+            "84f3378840ae489e",
+            "474441f87872a468",
+            "e92fb782fb968d74",
+            "4ae05a260d3cee3c",
+            "03c20ff74fed724d",
+            "50344de0d5afc44b",
+            "09aa707141c308d3",
+            "81e7116daaeebee5",
+            "119d62e894da457a",
+            "e27e8178b0eef555",
+            "a40b6593d45ecbec",
+            "9e8f6c1da32b2958",
+            "ad0f1d6e313fd90e",
+            "0659305723cda371",
+            "c7e7c92271cda181"
+        ],
+        "x": 14,
+        "y": 899,
+        "w": 692,
+        "h": 962
+    },
+    {
+        "id": "a792248ed27b3095",
+        "type": "ui_tab",
+        "name": "Dashboard",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": true,
+        "hidden": false
+    },
+    {
+        "id": "8906270f2889dfd3",
+        "type": "ui_tab",
+        "name": "Sign In & Sign Up",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "1699667209f7a5bd",
+        "type": "ui_group",
+        "name": "Sign In",
+        "tab": "8906270f2889dfd3",
+        "order": 2,
+        "disp": true,
+        "width": "8",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "d7ca3dba9af8a99a",
+        "type": "ui_group",
+        "name": "Sign Up",
+        "tab": "8906270f2889dfd3",
+        "order": 1,
+        "disp": true,
+        "width": "8",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "98d4f436e2bef99f",
+        "type": "ui_group",
+        "name": "User Database",
+        "tab": "8906270f2889dfd3",
+        "order": 3,
+        "disp": true,
+        "width": "16",
+        "collapse": true,
+        "className": ""
+    },
+    {
+        "id": "c193e5904777d516",
+        "type": "ui_group",
+        "name": "2",
+        "tab": "a792248ed27b3095",
+        "order": 2,
+        "disp": false,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "573d34c5f0b7483b",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "4dd54fb92a77b2e4",
+        "type": "ui_group",
+        "name": "BUTTON_OPEN_DOOR",
+        "tab": "a792248ed27b3095",
+        "order": 3,
+        "disp": false,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "1df1496c38736d2e",
+        "type": "ui_group",
+        "name": "1",
+        "tab": "a792248ed27b3095",
+        "order": 1,
+        "disp": false,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "d1989f2e67c75bbb",
+        "type": "ui_group",
+        "name": "3",
+        "tab": "a792248ed27b3095",
+        "order": 4,
+        "disp": false,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "fd12eae5430e069a",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "test.mosquitto.org",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "27133f1f04c8b028",
+        "type": "ui_tab",
+        "name": "Settings",
+        "icon": "dashboard",
+        "order": 3,
+        "disabled": true,
+        "hidden": false
+    },
+    {
+        "id": "96e9bba7657a895c",
+        "type": "ui_group",
+        "name": "1",
+        "tab": "27133f1f04c8b028",
+        "order": 1,
+        "disp": false,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "7d15fe7f4915f2ee",
+        "type": "ui_group",
+        "name": "2",
+        "tab": "27133f1f04c8b028",
+        "order": 2,
+        "disp": false,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "1cf20dbbdb97e156",
+        "type": "mongodb3",
+        "uri": "mongodb+srv://ngocAnhDo26:26022004@cluster0.1xkby.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
+        "name": "AutomaticDoor",
+        "options": "",
+        "parallelism": "-1"
+    },
+    {
         "id": "9e84950799a55c87",
         "type": "ui_text_input",
         "z": "12920d928c584941",
@@ -164,7 +502,7 @@
         "width": 8,
         "height": 1,
         "passthru": true,
-        "mode": "text",
+        "mode": "password",
         "delay": "300",
         "topic": "payload",
         "sendOnBlur": true,
@@ -218,7 +556,7 @@
         "width": 8,
         "height": 1,
         "passthru": true,
-        "mode": "text",
+        "mode": "password",
         "delay": "300",
         "topic": "payload",
         "sendOnBlur": true,
@@ -485,6 +823,7 @@
         "id": "0ba661f3d4d164d9",
         "type": "ui_text",
         "z": "12920d928c584941",
+        "g": "3da94f65c707e23d",
         "group": "1df1496c38736d2e",
         "order": 2,
         "width": 0,
@@ -498,14 +837,15 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 470,
-        "y": 960,
+        "x": 490,
+        "y": 980,
         "wires": []
     },
     {
         "id": "d8816866e57c06b3",
         "type": "ui_button",
         "z": "12920d928c584941",
+        "g": "3da94f65c707e23d",
         "name": "",
         "group": "4dd54fb92a77b2e4",
         "order": 1,
@@ -522,8 +862,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 240,
-        "y": 920,
+        "x": 260,
+        "y": 940,
         "wires": [
             []
         ]
@@ -532,6 +872,7 @@
         "id": "5201ecc8045b09fc",
         "type": "ui_text",
         "z": "12920d928c584941",
+        "g": "3da94f65c707e23d",
         "group": "c193e5904777d516",
         "order": 2,
         "width": 0,
@@ -545,14 +886,15 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 430,
-        "y": 1280,
+        "x": 450,
+        "y": 1260,
         "wires": []
     },
     {
         "id": "289b0a913e5a7c1c",
         "type": "ui_text",
         "z": "12920d928c584941",
+        "g": "3da94f65c707e23d",
         "group": "1df1496c38736d2e",
         "order": 2,
         "width": 0,
@@ -566,14 +908,15 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 410,
-        "y": 1220,
+        "x": 430,
+        "y": 1200,
         "wires": []
     },
     {
         "id": "7cc0802acb3c5992",
         "type": "ui_text",
         "z": "12920d928c584941",
+        "g": "3da94f65c707e23d",
         "group": "c193e5904777d516",
         "order": 2,
         "width": 0,
@@ -587,8 +930,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 410,
-        "y": 1340,
+        "x": 430,
+        "y": 1320,
         "wires": []
     },
     {
@@ -667,6 +1010,7 @@
         "id": "deaf4e63997158fd",
         "type": "ui_chart",
         "z": "12920d928c584941",
+        "g": "3da94f65c707e23d",
         "name": "",
         "group": "d1989f2e67c75bbb",
         "order": 0,
@@ -701,8 +1045,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 420,
-        "y": 1100,
+        "x": 440,
+        "y": 1120,
         "wires": [
             []
         ]
@@ -711,6 +1055,7 @@
         "id": "40935547c75831a2",
         "type": "mqtt in",
         "z": "12920d928c584941",
+        "g": "3da94f65c707e23d",
         "name": "",
         "topic": "/22127010/flag/doorIsClosed",
         "qos": "2",
@@ -720,8 +1065,8 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 140,
-        "y": 960,
+        "x": 160,
+        "y": 980,
         "wires": [
             [
                 "0ba661f3d4d164d9",
@@ -754,6 +1099,7 @@
         "id": "3e0be98385a69fe4",
         "type": "ui_switch",
         "z": "12920d928c584941",
+        "g": "5a79cac994192a0d",
         "name": "",
         "label": "Safety Mode",
         "tooltip": "",
@@ -776,8 +1122,8 @@
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 230,
-        "y": 1600,
+        "x": 110,
+        "y": 1940,
         "wires": [
             [
                 "9db4076cf61c59a0"
@@ -788,6 +1134,7 @@
         "id": "9db4076cf61c59a0",
         "type": "mqtt out",
         "z": "12920d928c584941",
+        "g": "5a79cac994192a0d",
         "name": "",
         "topic": "/22127010/flag/safetyMode",
         "qos": "",
@@ -798,14 +1145,15 @@
         "correl": "",
         "expiry": "",
         "broker": "fd12eae5430e069a",
-        "x": 520,
-        "y": 1600,
+        "x": 400,
+        "y": 1940,
         "wires": []
     },
     {
         "id": "da0695c148853fce",
         "type": "function",
         "z": "12920d928c584941",
+        "g": "3da94f65c707e23d",
         "name": "GET DATE",
         "func": "\nvar d = new Date();\nvar day = d.getDate();\nvar month = d.getMonth();\nvar year = d.getFullYear();\nif (day <= 9)\n    day = \"0\" + day;\nif (month <= 9)\n    month = \"0\" + (month + 1);\nvar date_out = day + \"/\" + month + \"/\" + year;\nmsg.payload = date_out\n\n\n\nreturn msg;",
         "outputs": 1,
@@ -814,8 +1162,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 250,
-        "y": 1100,
+        "x": 270,
+        "y": 1120,
         "wires": [
             [
                 "deaf4e63997158fd"
@@ -826,6 +1174,7 @@
         "id": "ff12afbdce829a0f",
         "type": "debug",
         "z": "12920d928c584941",
+        "g": "3da94f65c707e23d",
         "name": "debug 2",
         "active": true,
         "tosidebar": true,
@@ -834,14 +1183,15 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 420,
-        "y": 1020,
+        "x": 440,
+        "y": 1040,
         "wires": []
     },
     {
         "id": "73ba8083cbe465ed",
         "type": "switch",
         "z": "12920d928c584941",
+        "g": "3da94f65c707e23d",
         "name": "",
         "property": "payload",
         "propertyType": "msg",
@@ -860,8 +1210,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 90,
-        "y": 1100,
+        "x": 110,
+        "y": 1120,
         "wires": [
             [
                 "da0695c148853fce"
@@ -937,6 +1287,7 @@
         "id": "9e409b48861ea81a",
         "type": "ui_switch",
         "z": "12920d928c584941",
+        "g": "5a79cac994192a0d",
         "name": "",
         "label": "Always OPEN",
         "tooltip": "",
@@ -959,8 +1310,8 @@
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 240,
-        "y": 1660,
+        "x": 120,
+        "y": 2000,
         "wires": [
             [
                 "7e895bdc382ad0b1"
@@ -971,6 +1322,7 @@
         "id": "1af28acc72ef52f7",
         "type": "ui_switch",
         "z": "12920d928c584941",
+        "g": "5a79cac994192a0d",
         "name": "",
         "label": "Light ON",
         "tooltip": "",
@@ -993,8 +1345,8 @@
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 220,
-        "y": 1720,
+        "x": 100,
+        "y": 2060,
         "wires": [
             [
                 "725a8692a3d38c1d"
@@ -1005,6 +1357,7 @@
         "id": "e8936a700e218380",
         "type": "ui_switch",
         "z": "12920d928c584941",
+        "g": "5a79cac994192a0d",
         "name": "",
         "label": "Notifications ON",
         "tooltip": "",
@@ -1027,16 +1380,19 @@
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 240,
-        "y": 1780,
+        "x": 120,
+        "y": 2120,
         "wires": [
-            []
+            [
+                "2b6e2a5b74ec131f"
+            ]
         ]
     },
     {
         "id": "98c3a310f501f539",
         "type": "mqtt in",
         "z": "12920d928c584941",
+        "g": "3da94f65c707e23d",
         "name": "",
         "topic": "/22127303/flag/doorLight",
         "qos": "2",
@@ -1046,8 +1402,8 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 150,
-        "y": 1220,
+        "x": 170,
+        "y": 1200,
         "wires": [
             [
                 "289b0a913e5a7c1c"
@@ -1058,6 +1414,7 @@
         "id": "4e9b55b641c9bbd0",
         "type": "mqtt in",
         "z": "12920d928c584941",
+        "g": "3da94f65c707e23d",
         "name": "",
         "topic": "/22127010/flag/peopleDetected",
         "qos": "2",
@@ -1067,8 +1424,8 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 170,
-        "y": 1280,
+        "x": 190,
+        "y": 1260,
         "wires": [
             [
                 "5201ecc8045b09fc"
@@ -1079,8 +1436,9 @@
         "id": "8e3650fadfb45fc1",
         "type": "mqtt in",
         "z": "12920d928c584941",
+        "g": "3da94f65c707e23d",
         "name": "",
-        "topic": "/22127303/flag/peopleDetected",
+        "topic": "/22127303/flag/fireSensor",
         "qos": "2",
         "datatype": "auto-detect",
         "broker": "fd12eae5430e069a",
@@ -1089,7 +1447,7 @@
         "rh": 0,
         "inputs": 0,
         "x": 170,
-        "y": 1340,
+        "y": 1320,
         "wires": [
             [
                 "7cc0802acb3c5992"
@@ -1100,6 +1458,7 @@
         "id": "7e895bdc382ad0b1",
         "type": "mqtt out",
         "z": "12920d928c584941",
+        "g": "5a79cac994192a0d",
         "name": "",
         "topic": "/22127010/flag/alwaysOpen",
         "qos": "",
@@ -1110,14 +1469,15 @@
         "correl": "",
         "expiry": "",
         "broker": "fd12eae5430e069a",
-        "x": 520,
-        "y": 1660,
+        "x": 400,
+        "y": 2000,
         "wires": []
     },
     {
         "id": "725a8692a3d38c1d",
         "type": "mqtt out",
         "z": "12920d928c584941",
+        "g": "5a79cac994192a0d",
         "name": "",
         "topic": "/22127010/flag/alwaysLightOn",
         "qos": "",
@@ -1128,8 +1488,8 @@
         "correl": "",
         "expiry": "",
         "broker": "fd12eae5430e069a",
-        "x": 530,
-        "y": 1720,
+        "x": 410,
+        "y": 2060,
         "wires": []
     },
     {
@@ -1293,6 +1653,7 @@
         "id": "1e1fd57e8242b321",
         "type": "mqtt in",
         "z": "12920d928c584941",
+        "g": "3da94f65c707e23d",
         "name": "",
         "topic": "/22127010/flag/alert",
         "qos": "2",
@@ -1302,11 +1663,12 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 130,
-        "y": 1400,
+        "x": 150,
+        "y": 1380,
         "wires": [
             [
-                "62d79664ec0a2357"
+                "62d79664ec0a2357",
+                "0659305723cda371"
             ]
         ]
     },
@@ -1314,6 +1676,7 @@
         "id": "62d79664ec0a2357",
         "type": "switch",
         "z": "12920d928c584941",
+        "g": "3da94f65c707e23d",
         "name": "",
         "property": "payload",
         "propertyType": "msg",
@@ -1325,8 +1688,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 330,
-        "y": 1400,
+        "x": 350,
+        "y": 1380,
         "wires": [
             [
                 "b9740c3e0f22029d"
@@ -1337,16 +1700,17 @@
         "id": "b9740c3e0f22029d",
         "type": "function",
         "z": "12920d928c584941",
-        "name": "Check bật gửi thông báo về đt, email",
-        "func": "msg.payload = true;\nreturn msg;",
+        "g": "3da94f65c707e23d",
+        "name": "NOTIFICATION_CHECK",
+        "func": "\nmsg.payload =  flow.get('NOTIFI') || '';\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 590,
-        "y": 1400,
+        "x": 570,
+        "y": 1380,
         "wires": [
             [
                 "84f3378840ae489e"
@@ -1357,6 +1721,7 @@
         "id": "84f3378840ae489e",
         "type": "switch",
         "z": "12920d928c584941",
+        "g": "3da94f65c707e23d",
         "name": "",
         "property": "payload",
         "propertyType": "msg",
@@ -1368,31 +1733,11 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 170,
-        "y": 1460,
+        "x": 190,
+        "y": 1440,
         "wires": [
             [
-                "87962b804a9d134c"
-            ]
-        ]
-    },
-    {
-        "id": "87962b804a9d134c",
-        "type": "function",
-        "z": "12920d928c584941",
-        "name": "function 2",
-        "func": "msg.payload = \"Door has been locked for 3 minutes!\";\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 320,
-        "y": 1460,
-        "wires": [
-            [
-                "474441f87872a468"
+                "a40b6593d45ecbec"
             ]
         ]
     },
@@ -1400,6 +1745,7 @@
         "id": "474441f87872a468",
         "type": "ui_toast",
         "z": "12920d928c584941",
+        "g": "3da94f65c707e23d",
         "position": "top right",
         "displayTime": "3",
         "highlight": "",
@@ -1411,8 +1757,8 @@
         "className": "",
         "topic": "",
         "name": "",
-        "x": 510,
-        "y": 1460,
+        "x": 570,
+        "y": 1440,
         "wires": []
     },
     {
@@ -1515,34 +1861,10 @@
         ]
     },
     {
-        "id": "e4fb622cc76dec8e",
-        "type": "inject",
-        "z": "12920d928c584941",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "\"Trẻ con sa mạc truyền tai nhau bài đồng dao Xương rồng đơm lá đơm hoa Nước đong đầy trên cao nguyên đá Là ngày hoàng đế trở về nhà! Người Shurima luôn mơ về thời khắc tái sinh của nhà vua Và cuối cùng điều đó cũng trở thành sự thật!\"",
-        "payloadType": "str",
-        "x": 150,
-        "y": 1880,
-        "wires": [
-            [
-                "e92fb782fb968d74"
-            ]
-        ]
-    },
-    {
         "id": "e92fb782fb968d74",
         "type": "http request",
         "z": "12920d928c584941",
+        "g": "3da94f65c707e23d",
         "name": "",
         "method": "GET",
         "ret": "txt",
@@ -1555,175 +1877,465 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 370,
-        "y": 1880,
+        "x": 570,
+        "y": 1480,
         "wires": [
             []
         ]
     },
     {
-        "id": "1699667209f7a5bd",
-        "type": "ui_group",
-        "name": "Sign In",
-        "tab": "8906270f2889dfd3",
-        "order": 2,
-        "disp": true,
-        "width": "8",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "d7ca3dba9af8a99a",
-        "type": "ui_group",
-        "name": "Sign Up",
-        "tab": "8906270f2889dfd3",
-        "order": 1,
-        "disp": true,
-        "width": "8",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "98d4f436e2bef99f",
-        "type": "ui_group",
-        "name": "User Database",
-        "tab": "8906270f2889dfd3",
-        "order": 3,
-        "disp": true,
-        "width": "16",
-        "collapse": true,
-        "className": ""
-    },
-    {
-        "id": "1df1496c38736d2e",
-        "type": "ui_group",
-        "name": "1",
-        "tab": "a792248ed27b3095",
-        "order": 1,
-        "disp": false,
-        "width": "6",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "4dd54fb92a77b2e4",
-        "type": "ui_group",
-        "name": "BUTTON_OPEN_DOOR",
-        "tab": "a792248ed27b3095",
-        "order": 3,
-        "disp": false,
-        "width": "6",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "c193e5904777d516",
-        "type": "ui_group",
-        "name": "2",
-        "tab": "a792248ed27b3095",
-        "order": 2,
-        "disp": false,
-        "width": "6",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "d1989f2e67c75bbb",
-        "type": "ui_group",
-        "name": "3",
-        "tab": "a792248ed27b3095",
-        "order": 4,
-        "disp": false,
-        "width": "6",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "fd12eae5430e069a",
-        "type": "mqtt-broker",
+        "id": "4ae05a260d3cee3c",
+        "type": "http request",
+        "z": "12920d928c584941",
+        "g": "3da94f65c707e23d",
         "name": "",
-        "broker": "test.mosquitto.org",
-        "port": "1883",
-        "clientid": "",
-        "autoConnect": true,
-        "usetls": false,
-        "protocolVersion": "4",
-        "keepalive": "60",
-        "cleansession": true,
-        "autoUnsubscribe": true,
-        "birthTopic": "",
-        "birthQos": "0",
-        "birthRetain": "false",
-        "birthPayload": "",
-        "birthMsg": {},
-        "closeTopic": "",
-        "closeQos": "0",
-        "closeRetain": "false",
-        "closePayload": "",
-        "closeMsg": {},
-        "willTopic": "",
-        "willQos": "0",
-        "willRetain": "false",
-        "willPayload": "",
-        "willMsg": {},
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://www.pushsafer.com/api?k=jKccxcmEgrTvH2Fw9uDY&m={{payload}}",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 570,
+        "y": 1760,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "03c20ff74fed724d",
+        "type": "mqtt in",
+        "z": "12920d928c584941",
+        "g": "3da94f65c707e23d",
+        "name": "",
+        "topic": "/22127303/flag/fireSensor",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "fd12eae5430e069a",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 150,
+        "y": 1660,
+        "wires": [
+            [
+                "09aa707141c308d3",
+                "ad0f1d6e313fd90e"
+            ]
+        ]
+    },
+    {
+        "id": "50344de0d5afc44b",
+        "type": "change",
+        "z": "12920d928c584941",
+        "g": "3da94f65c707e23d",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "FIRE!!!",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 340,
+        "y": 1720,
+        "wires": [
+            [
+                "4ae05a260d3cee3c",
+                "e27e8178b0eef555"
+            ]
+        ]
+    },
+    {
+        "id": "2b6e2a5b74ec131f",
+        "type": "function",
+        "z": "12920d928c584941",
+        "g": "5a79cac994192a0d",
+        "name": "function 4",
+        "func": "if(msg.payload)\n{\n    flow.set(\"NOTIFI\",true)\n}\nelse\n{\n    flow.set(\"NOTIFI\",false)\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 2120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "09aa707141c308d3",
+        "type": "switch",
+        "z": "12920d928c584941",
+        "g": "3da94f65c707e23d",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 350,
+        "y": 1660,
+        "wires": [
+            [
+                "81e7116daaeebee5"
+            ]
+        ]
+    },
+    {
+        "id": "81e7116daaeebee5",
+        "type": "function",
+        "z": "12920d928c584941",
+        "g": "3da94f65c707e23d",
+        "name": "NOTIFICATION_CHECK",
+        "func": "\nmsg.payload =  flow.get('NOTIFI') || '';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 550,
+        "y": 1660,
+        "wires": [
+            [
+                "119d62e894da457a"
+            ]
+        ]
+    },
+    {
+        "id": "119d62e894da457a",
+        "type": "switch",
+        "z": "12920d928c584941",
+        "g": "3da94f65c707e23d",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 170,
+        "y": 1720,
+        "wires": [
+            [
+                "50344de0d5afc44b"
+            ]
+        ]
+    },
+    {
+        "id": "e27e8178b0eef555",
+        "type": "ui_toast",
+        "z": "12920d928c584941",
+        "g": "3da94f65c707e23d",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 570,
+        "y": 1720,
+        "wires": []
+    },
+    {
+        "id": "a40b6593d45ecbec",
+        "type": "change",
+        "z": "12920d928c584941",
+        "g": "3da94f65c707e23d",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Door has been locked for 3 minutes!",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 340,
+        "y": 1440,
+        "wires": [
+            [
+                "474441f87872a468",
+                "e92fb782fb968d74"
+            ]
+        ]
+    },
+    {
+        "id": "cdca7af9e89c7cdf",
+        "type": "mqtt out",
+        "z": "12920d928c584941",
+        "g": "5a79cac994192a0d",
+        "name": "",
+        "topic": "/22127303/flag/doorPassword",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
         "userProps": "",
-        "sessionExpiry": ""
+        "correl": "",
+        "expiry": "",
+        "broker": "fd12eae5430e069a",
+        "x": 650,
+        "y": 2240,
+        "wires": []
     },
     {
-        "id": "96e9bba7657a895c",
-        "type": "ui_group",
-        "name": "1",
-        "tab": "27133f1f04c8b028",
+        "id": "df03531fa90a0596",
+        "type": "ui_text_input",
+        "z": "12920d928c584941",
+        "g": "5a79cac994192a0d",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "group": "96e9bba7657a895c",
         "order": 1,
-        "disp": false,
-        "width": "6",
-        "collapse": false,
-        "className": ""
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "password",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 120,
+        "y": 2180,
+        "wires": [
+            [
+                "f40f13a2b12b7331"
+            ]
+        ]
     },
     {
-        "id": "7d15fe7f4915f2ee",
-        "type": "ui_group",
-        "name": "2",
-        "tab": "27133f1f04c8b028",
-        "order": 2,
-        "disp": false,
-        "width": "6",
-        "collapse": false,
-        "className": ""
+        "id": "f40f13a2b12b7331",
+        "type": "function",
+        "z": "12920d928c584941",
+        "g": "5a79cac994192a0d",
+        "name": "CHECK_ERROR_PASSWORD",
+        "func": "let password = msg.payload;  \n\nif (typeof password === 'string' && password.length === 4 && /^\\d{4}$/.test(password)) {\n    msg.payload = password;  \n} else {\n    msg.payload = \"ERROR: PASSWORD MUST BE 4 LETTERS !\";\n}\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 2180,
+        "wires": [
+            [
+                "f2917dac1ca95c79"
+            ]
+        ]
     },
     {
-        "id": "1cf20dbbdb97e156",
-        "type": "mongodb3",
-        "uri": "mongodb+srv://ngocAnhDo26:26022004@cluster0.1xkby.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
-        "name": "AutomaticDoor",
-        "options": "",
-        "parallelism": "-1"
+        "id": "f2917dac1ca95c79",
+        "type": "switch",
+        "z": "12920d928c584941",
+        "g": "5a79cac994192a0d",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "ERROR",
+                "vt": "str"
+            },
+            {
+                "t": "nempty"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 370,
+        "y": 2240,
+        "wires": [
+            [
+                "55ed79fa6a05e444"
+            ],
+            [
+                "cdca7af9e89c7cdf"
+            ]
+        ]
     },
     {
-        "id": "8906270f2889dfd3",
-        "type": "ui_tab",
-        "name": "Sign In & Sign Up",
-        "icon": "dashboard",
-        "order": 2,
-        "disabled": false,
-        "hidden": false
+        "id": "55ed79fa6a05e444",
+        "type": "ui_toast",
+        "z": "12920d928c584941",
+        "g": "5a79cac994192a0d",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 630,
+        "y": 2200,
+        "wires": []
     },
     {
-        "id": "a792248ed27b3095",
-        "type": "ui_tab",
-        "name": "Dashboard",
-        "icon": "dashboard",
-        "order": 1,
-        "disabled": true,
-        "hidden": false
+        "id": "9e8f6c1da32b2958",
+        "type": "e-mail",
+        "z": "12920d928c584941",
+        "g": "3da94f65c707e23d",
+        "server": "smtp.gmail.com",
+        "port": "465",
+        "authtype": "BASIC",
+        "saslformat": true,
+        "token": "oauth2Response.access_token",
+        "secure": true,
+        "tls": true,
+        "name": "ducnhan1522004@gmail.com",
+        "dname": "",
+        "x": 490,
+        "y": 1820,
+        "wires": []
     },
     {
-        "id": "27133f1f04c8b028",
-        "type": "ui_tab",
-        "name": "Settings",
-        "icon": "dashboard",
-        "order": 3,
-        "disabled": true,
-        "hidden": false
+        "id": "ad0f1d6e313fd90e",
+        "type": "function",
+        "z": "12920d928c584941",
+        "g": "3da94f65c707e23d",
+        "name": "Fire_email_content",
+        "func": "msg.topic = \"CẢNH BÁO: Xảy ra cháy tại khu vực của thông minh\"\nmsg.payload = \"Xin vui lòng di tản và thông báo cho cơ quan chức năng\"\n\n\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 230,
+        "y": 1820,
+        "wires": [
+            [
+                "9e8f6c1da32b2958"
+            ]
+        ]
+    },
+    {
+        "id": "0659305723cda371",
+        "type": "function",
+        "z": "12920d928c584941",
+        "g": "3da94f65c707e23d",
+        "name": "Thief_alert",
+        "func": "msg.topic = \"CẢNH BÁO: Cửa đã bị chặn vì sao mật khẩu\"\nmsg.payload = \"Nghi ngờ có hành vi đột nhập vào bên trong tòa nhà, cửa đã bị khóa trong vòng 3 phút!\"\n\n\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 210,
+        "y": 1520,
+        "wires": [
+            [
+                "c7e7c92271cda181"
+            ]
+        ]
+    },
+    {
+        "id": "c7e7c92271cda181",
+        "type": "e-mail",
+        "z": "12920d928c584941",
+        "g": "3da94f65c707e23d",
+        "server": "smtp.gmail.com",
+        "port": "465",
+        "authtype": "BASIC",
+        "saslformat": true,
+        "token": "oauth2Response.access_token",
+        "secure": true,
+        "tls": true,
+        "name": "ducnhan1522004@gmail.com",
+        "dname": "",
+        "x": 490,
+        "y": 1520,
+        "wires": []
+    },
+    {
+        "id": "ef2d58e568ae79ea",
+        "type": "e-mail",
+        "z": "12920d928c584941",
+        "server": "smtp.gmail.com",
+        "port": "465",
+        "authtype": "BASIC",
+        "saslformat": true,
+        "token": "oauth2Response.access_token",
+        "secure": true,
+        "tls": true,
+        "name": "ducnhan1522004@gmail.com",
+        "dname": "",
+        "x": 450,
+        "y": 2340,
+        "wires": []
+    },
+    {
+        "id": "41d5fa59781be824",
+        "type": "inject",
+        "z": "12920d928c584941",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "ádasdasdadad",
+        "payload": "ádadasda",
+        "payloadType": "str",
+        "x": 170,
+        "y": 2340,
+        "wires": [
+            [
+                "ef2d58e568ae79ea"
+            ]
+        ]
     }
 ]
