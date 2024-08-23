@@ -25,13 +25,13 @@
             "bdc661eaf5b3f902",
             "2cfec57726334544",
             "f329337996e31ab3",
-            "91d4cae595d2fe2c",
-            "d95239f105d8822c"
+            "581c3b3e2b549f1d",
+            "5381e8b62d5f9288"
         ],
-        "x": 74,
-        "y": 499,
-        "w": 592,
-        "h": 262
+        "x": 554,
+        "y": 519,
+        "w": 692,
+        "h": 242
     },
     {
         "id": "13be58712d45bdd9",
@@ -44,12 +44,12 @@
         },
         "nodes": [
             "20ee0c92f39e2529",
-            "b0263f1a0ca4121d",
-            "6d74a49774e28ac7"
+            "ed6b398fb1965797",
+            "d95239f105d8822c"
         ],
-        "x": 94,
-        "y": 759,
-        "w": 592,
+        "x": 114,
+        "y": 819,
+        "w": 532,
         "h": 82
     },
     {
@@ -90,11 +90,38 @@
             "901b7f2587c8d9fe",
             "8f65972edd19c474",
             "7784d5df8b5f2b53",
-            "52d6cd8ffcda6d72"
+            "52d6cd8ffcda6d72",
+            "f09315c22d5b3915",
+            "ac0bf9fa9d927724",
+            "869a33d5527823d1"
         ],
-        "x": 94,
+        "x": 74,
         "y": 19,
-        "w": 652,
+        "w": 712,
+        "h": 282
+    },
+    {
+        "id": "f2eb105179c32989",
+        "type": "group",
+        "z": "12920d928c584941",
+        "name": "Log Out",
+        "style": {
+            "label": true,
+            "color": "#ff0000"
+        },
+        "nodes": [
+            "6059a482feb994e8",
+            "e670b449d25b2d53",
+            "c17b0866f68207b8",
+            "1df5b74fa6b7518e",
+            "b6785477feadb53c",
+            "d2013ab2bcbc58ad",
+            "ddccdc8430321805",
+            "fa2a6f78cb745e0a"
+        ],
+        "x": -6,
+        "y": 519,
+        "w": 512,
         "h": 282
     },
     {
@@ -170,8 +197,8 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 310,
-        "y": 540,
+        "x": 790,
+        "y": 560,
         "wires": [
             [
                 "8d109ebe53881ce8"
@@ -197,8 +224,8 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 300,
-        "y": 600,
+        "x": 780,
+        "y": 620,
         "wires": [
             [
                 "14fb12c22f493dac"
@@ -249,17 +276,19 @@
         "z": "12920d928c584941",
         "g": "315983a64646b7fb",
         "name": "INPUT_CLOUD_TK_MK",
-        "func": "\n",
+        "func": "\n//let TK_MK_LIST = [\n//    {username: \"123\", password: \"111\", role: \"admin\"},\n//   {username: \"234\", password: \"222\", role: \"guest\"},\n//    {username: \"456\", password: \"333\", role: \"guest\"}\n//];\n\n// Khởi tạo TK_MK_LIST là một mảng\nlet TK_MK_LIST = flow.get(\"TK_MK_LIST\") || [];  // Lấy danh sách từ flow hoặc khởi tạo mảng rỗng nếu chưa có\n\n// Tạo đối tượng người dùng mới từ msg.payload\nlet newUser = {\n    username: msg.payload.username,\n    password: msg.payload.password,\n    role: msg.payload.role\n};\n\n// Thêm đối tượng mới vào mảng TK_MK_LIST\nTK_MK_LIST.push(newUser);\n\n// Cập nhật lại TK_MK_LIST trong flow\nflow.set(\"TK_MK_LIST\", TK_MK_LIST);\n\n// Đặt IS_LOGIN là false\nflow.set(\"IS_LOGIN\", false);\n\n// Gán lại msg.payload để trả về danh sách cập nhật\nmsg.payload = TK_MK_LIST;\n\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
-        "initialize": "let TK_MK_LIST = [\n    {username: \"123\", password: \"111\", role: \"admin\"},\n    {username: \"234\", password: \"222\", role: \"guest\"},\n    {username: \"456\", password: \"333\", role: \"guest\"}\n];\n\nflow.set(\"IS_LOGIN\", false);\nflow.set(\"TK_MK_LIST\", TK_MK_LIST);\n\nreturn msg;\n",
+        "initialize": "//let TK_MK_LIST = [\n//    {username: \"123\", password: \"111\", role: \"admin\"},\n //   {username: \"234\", password: \"222\", role: \"guest\"},\n//    {username: \"456\", password: \"333\", role: \"guest\"}\n//];\n\n//let TK_MK_LIST ={}\n\n\n//flow.set(\"IS_LOGIN\", false);\n//flow.set(\"TK_MK_LIST\", TK_MK_LIST);\n\n//return msg;\n",
         "finalize": "",
         "libs": [],
-        "x": 370,
+        "x": 550,
         "y": 60,
         "wires": [
-            []
+            [
+                "ac0bf9fa9d927724"
+            ]
         ]
     },
     {
@@ -275,8 +304,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 520,
-        "y": 540,
+        "x": 1000,
+        "y": 560,
         "wires": [
             []
         ]
@@ -294,8 +323,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 520,
-        "y": 600,
+        "x": 1000,
+        "y": 620,
         "wires": [
             []
         ]
@@ -321,11 +350,11 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 150,
-        "y": 600,
+        "x": 630,
+        "y": 580,
         "wires": [
             [
-                "2cfec57726334544"
+                "581c3b3e2b549f1d"
             ]
         ]
     },
@@ -334,7 +363,7 @@
         "type": "function",
         "z": "12920d928c584941",
         "g": "063a305f48ec89cd",
-        "name": "OUTPUT_CLOUD_TK_MK",
+        "name": "OUTPUT_TK_MK",
         "func": "let TK_MK_LIST = flow.get(\"TK_MK_LIST\") || {};\nlet IS_LOGIN = flow.get(\"IS_LOGIN\") || false;\n\nlet TK_NEW = flow.get(\"TK_NEW\") || \"\";\nlet MK_NEW = flow.get(\"MK_NEW\") || \"\";\nlet ROLE_NEW = \"guest\"\n\nlet existingUser = TK_MK_LIST.find(function(user) {\n    return user.username === TK_NEW;\n});\n\nif (existingUser) {\n    msg.payload = `Account ${TK_NEW} already exists !`;\n} else {\n    TK_MK_LIST.push({\n        username: TK_NEW,\n        password: MK_NEW,\n        role: ROLE_NEW\n    });\n    \n    flow.set(\"TK_MK_LIST\", TK_MK_LIST);\n    msg.payload = `New account is added`;\n}\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
@@ -342,12 +371,11 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 260,
+        "x": 890,
         "y": 660,
         "wires": [
             [
-                "f329337996e31ab3",
-                "91d4cae595d2fe2c"
+                "f329337996e31ab3"
             ]
         ]
     },
@@ -372,55 +400,12 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 170,
-        "y": 800,
+        "x": 190,
+        "y": 860,
         "wires": [
             [
-                "b0263f1a0ca4121d"
+                "ed6b398fb1965797"
             ]
-        ]
-    },
-    {
-        "id": "b0263f1a0ca4121d",
-        "type": "function",
-        "z": "12920d928c584941",
-        "g": "13be58712d45bdd9",
-        "name": "SHOW_TK_MK",
-        "func": "let TK_MK_LIST = flow.get(\"TK_MK_LIST\") || {};\n//let LIST=\"<b>Danh sách tài khoản - mật khẩu:</b><br>\";\nlet IS_LOGIN = flow.get(\"IS_LOGIN\") || false;\n\nif(IS_LOGIN == false){\n    return msg\n}\n\n//for (let tk in TK_MK_LIST) {\n//    LIST += `Tài khoản: ${tk}, Mật khẩu: ${TK_MK_LIST[tk]}<br>`;\n//}\n\nvar tableHTML = \"<table border='1'><tr><th>NO</th><th>Username</th><th>Role</th></tr>\";\n\nfor (var i = 0; i < flow.get(\"TK_MK_LIST\").length; i++) {\n    var item = flow.get(\"TK_MK_LIST\")[i];\n    tableHTML += \"<tr><td>\" + (i + 1) + \"</td><td>\" + item.username + \"</td><td>\" + item.role + \"</td></tr>\";\n}\n\ntableHTML += \"</table>\";\n\nmsg.payload = tableHTML;\nreturn msg;\n\n",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 360,
-        "y": 800,
-        "wires": [
-            [
-                "6d74a49774e28ac7"
-            ]
-        ]
-    },
-    {
-        "id": "6d74a49774e28ac7",
-        "type": "ui_template",
-        "z": "12920d928c584941",
-        "g": "13be58712d45bdd9",
-        "group": "98d4f436e2bef99f",
-        "name": "SHOW_TK_MK",
-        "order": 3,
-        "width": "16",
-        "height": "10",
-        "format": "<div ng-bind-html=\"msg.payload\"></div>",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "className": "",
-        "x": 580,
-        "y": 800,
-        "wires": [
-            []
         ]
     },
     {
@@ -429,7 +414,7 @@
         "z": "12920d928c584941",
         "g": "e6fe9048638cc085",
         "name": "CHECK_CHANGE_TAB",
-        "func": "let IS_LOGIN = flow.get(\"IS_LOGIN\") || false;\n\nif (IS_LOGIN) {\n    msg.payload = {tab: \"Dashboard\"};\n} else {\n    msg.payload = {tab: \"Login\"};\n}\n\nreturn msg;\n",
+        "func": "let IS_LOGIN = flow.get(\"IS_LOGIN\") || false;\n\nif (IS_LOGIN) {\n    msg.payload = {tab: \"Dashboard\"};\n} else {\n    msg.payload = {tab: \"Sign In & Sign Up\"};\n}\n\nreturn msg;\n",
         "outputs": 1,
         "timeout": "0",
         "noerr": 0,
@@ -513,7 +498,7 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 390,
+        "x": 470,
         "y": 960,
         "wires": []
     },
@@ -554,7 +539,7 @@
         "name": "",
         "label": "People Detected",
         "format": "{{msg.payload}}",
-        "layout": "row-right",
+        "layout": "row-spread",
         "className": "",
         "style": false,
         "font": "",
@@ -575,7 +560,7 @@
         "name": "",
         "label": "Door Light",
         "format": "{{msg.payload}}",
-        "layout": "row-right",
+        "layout": "row-spread",
         "className": "",
         "style": false,
         "font": "",
@@ -596,7 +581,7 @@
         "name": "",
         "label": "Fire Sensor",
         "format": "{{msg.payload}}",
-        "layout": "row-right",
+        "layout": "row-spread",
         "className": "",
         "style": false,
         "font": "",
@@ -888,6 +873,7 @@
         "id": "d2013ab2bcbc58ad",
         "type": "inject",
         "z": "12920d928c584941",
+        "g": "f2eb105179c32989",
         "name": "",
         "props": [
             {
@@ -905,8 +891,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 180,
-        "y": 1880,
+        "x": 240,
+        "y": 620,
         "wires": [
             [
                 "6059a482feb994e8"
@@ -917,16 +903,17 @@
         "id": "6059a482feb994e8",
         "type": "function",
         "z": "12920d928c584941",
+        "g": "f2eb105179c32989",
         "name": "RESET_WEB",
-        "func": "msg.payload = {\n    tabs: {\n        \"disable\": [\"Settings\",\"Dashboard\"],\n\n    }\n};\n\n\nreturn msg;",
+        "func": "msg.payload = {\n    tabs: {\n        \"disable\": [\"Settings\",\"Dashboard\"],\n\n    }\n};\n\nflow.set(\"IS_LOGIN\", null);\nflow.set(\"TK_MK_LIST\", null);\nflow.set(\"role\", null);\n\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 360,
-        "y": 1880,
+        "x": 200,
+        "y": 560,
         "wires": [
             [
                 "e670b449d25b2d53"
@@ -937,10 +924,11 @@
         "id": "e670b449d25b2d53",
         "type": "ui_ui_control",
         "z": "12920d928c584941",
+        "g": "f2eb105179c32989",
         "name": "",
         "events": "all",
-        "x": 520,
-        "y": 1880,
+        "x": 360,
+        "y": 560,
         "wires": [
             []
         ]
@@ -1160,25 +1148,25 @@
         "className": "",
         "topic": "",
         "name": "",
-        "x": 530,
-        "y": 640,
+        "x": 1130,
+        "y": 680,
         "wires": []
     },
     {
-        "id": "91d4cae595d2fe2c",
+        "id": "ed6b398fb1965797",
         "type": "function",
         "z": "12920d928c584941",
-        "g": "063a305f48ec89cd",
+        "g": "13be58712d45bdd9",
         "name": "SHOW_TK_MK",
-        "func": "let role = flow.get(\"ROLE\") || ''; \nif(role == 'admin')\n{\n    msg.payload = flow.get(\"TK_MK_LIST\") || {};\n}\n\nreturn msg;",
+        "func": "let ROLE = flow.get(\"ROLE\") || ''; \nlet IS_LOGIN = flow.get(\"IS_LOGIN\") || false;\n\n\nif(ROLE == 'admin' && IS_LOGIN == true)\n{\n    msg.payload = flow.get(\"TK_MK_LIST\") || {};\n}\nelse\n{\n    msg.payload = ''\n}\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 420,
-        "y": 720,
+        "x": 380,
+        "y": 860,
         "wires": [
             [
                 "d95239f105d8822c"
@@ -1189,7 +1177,7 @@
         "id": "d95239f105d8822c",
         "type": "ui_table",
         "z": "12920d928c584941",
-        "g": "063a305f48ec89cd",
+        "g": "13be58712d45bdd9",
         "group": "98d4f436e2bef99f",
         "name": "",
         "order": 2,
@@ -1198,9 +1186,380 @@
         "columns": [],
         "outputs": 0,
         "cts": false,
-        "x": 590,
-        "y": 720,
+        "x": 570,
+        "y": 860,
         "wires": []
+    },
+    {
+        "id": "5381e8b62d5f9288",
+        "type": "mongodb3 in",
+        "z": "12920d928c584941",
+        "g": "063a305f48ec89cd",
+        "service": "_ext_",
+        "configNode": "1cf20dbbdb97e156",
+        "name": "",
+        "collection": "User",
+        "operation": "insert",
+        "x": 980,
+        "y": 720,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "581c3b3e2b549f1d",
+        "type": "function",
+        "z": "12920d928c584941",
+        "g": "063a305f48ec89cd",
+        "name": "WRITE_DATA_BASE",
+        "func": "let TK_MK_LIST = flow.get(\"TK_MK_LIST\") || {};\nlet IS_LOGIN = flow.get(\"IS_LOGIN\") || false;\n\nlet TK_NEW = flow.get(\"TK_NEW\") || \"\";\nlet MK_NEW = flow.get(\"MK_NEW\") || \"\";\nlet ROLE_NEW = \"guest\"\n\nlet existingUser = TK_MK_LIST.find(function (user) {\n    return user.username === TK_NEW;\n});\n\nif (existingUser) {\n    msg.payload = \"FAIL\"\n} else {\n    msg.payload = [\n        { \"username\": TK_NEW, \"password\": MK_NEW, \"role\": \"guest\" }\n    ]\n}\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 720,
+        "y": 720,
+        "wires": [
+            [
+                "2cfec57726334544",
+                "5381e8b62d5f9288"
+            ]
+        ]
+    },
+    {
+        "id": "f09315c22d5b3915",
+        "type": "mongodb3 in",
+        "z": "12920d928c584941",
+        "g": "315983a64646b7fb",
+        "service": "_ext_",
+        "configNode": "1cf20dbbdb97e156",
+        "name": "",
+        "collection": "User",
+        "operation": "find.forEach",
+        "x": 260,
+        "y": 60,
+        "wires": [
+            [
+                "901b7f2587c8d9fe"
+            ]
+        ]
+    },
+    {
+        "id": "ac0bf9fa9d927724",
+        "type": "debug",
+        "z": "12920d928c584941",
+        "g": "315983a64646b7fb",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 680,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "869a33d5527823d1",
+        "type": "inject",
+        "z": "12920d928c584941",
+        "g": "315983a64646b7fb",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "payload": "{}",
+        "payloadType": "json",
+        "x": 170,
+        "y": 140,
+        "wires": [
+            [
+                "f09315c22d5b3915"
+            ]
+        ]
+    },
+    {
+        "id": "1e1fd57e8242b321",
+        "type": "mqtt in",
+        "z": "12920d928c584941",
+        "name": "",
+        "topic": "/22127010/flag/alert",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "fd12eae5430e069a",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 130,
+        "y": 1400,
+        "wires": [
+            [
+                "62d79664ec0a2357"
+            ]
+        ]
+    },
+    {
+        "id": "62d79664ec0a2357",
+        "type": "switch",
+        "z": "12920d928c584941",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 330,
+        "y": 1400,
+        "wires": [
+            [
+                "b9740c3e0f22029d"
+            ]
+        ]
+    },
+    {
+        "id": "b9740c3e0f22029d",
+        "type": "function",
+        "z": "12920d928c584941",
+        "name": "Check bật gửi thông báo về đt, email",
+        "func": "msg.payload = true;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 1400,
+        "wires": [
+            [
+                "84f3378840ae489e"
+            ]
+        ]
+    },
+    {
+        "id": "84f3378840ae489e",
+        "type": "switch",
+        "z": "12920d928c584941",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 170,
+        "y": 1460,
+        "wires": [
+            [
+                "87962b804a9d134c"
+            ]
+        ]
+    },
+    {
+        "id": "87962b804a9d134c",
+        "type": "function",
+        "z": "12920d928c584941",
+        "name": "function 2",
+        "func": "msg.payload = \"Door has been locked for 3 minutes!\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 1460,
+        "wires": [
+            [
+                "474441f87872a468"
+            ]
+        ]
+    },
+    {
+        "id": "474441f87872a468",
+        "type": "ui_toast",
+        "z": "12920d928c584941",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 510,
+        "y": 1460,
+        "wires": []
+    },
+    {
+        "id": "c17b0866f68207b8",
+        "type": "ui_button",
+        "z": "12920d928c584941",
+        "g": "f2eb105179c32989",
+        "name": "",
+        "group": "d1989f2e67c75bbb",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Log Out",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 80,
+        "y": 720,
+        "wires": [
+            [
+                "b6785477feadb53c",
+                "ddccdc8430321805",
+                "d95239f105d8822c"
+            ]
+        ]
+    },
+    {
+        "id": "1df5b74fa6b7518e",
+        "type": "ui_ui_control",
+        "z": "12920d928c584941",
+        "g": "f2eb105179c32989",
+        "name": "",
+        "events": "all",
+        "x": 420,
+        "y": 760,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b6785477feadb53c",
+        "type": "function",
+        "z": "12920d928c584941",
+        "g": "f2eb105179c32989",
+        "name": "SWITCH_TAB",
+        "func": "msg.payload = {tab: \"Sign In & Sign Up\"};\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 240,
+        "y": 760,
+        "wires": [
+            [
+                "1df5b74fa6b7518e"
+            ]
+        ]
+    },
+    {
+        "id": "ddccdc8430321805",
+        "type": "function",
+        "z": "12920d928c584941",
+        "g": "f2eb105179c32989",
+        "name": "RESET_WEB",
+        "func": "msg.payload = {\n    tabs: {\n        \"disable\": [\"Settings\",\"Dashboard\"],\n\n    }\n};\n\nflow.set(\"IS_LOGIN\", null);\n\nflow.set(\"role\", null);\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 260,
+        "y": 700,
+        "wires": [
+            [
+                "fa2a6f78cb745e0a"
+            ]
+        ]
+    },
+    {
+        "id": "fa2a6f78cb745e0a",
+        "type": "ui_ui_control",
+        "z": "12920d928c584941",
+        "g": "f2eb105179c32989",
+        "name": "",
+        "events": "all",
+        "x": 420,
+        "y": 700,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e4fb622cc76dec8e",
+        "type": "inject",
+        "z": "12920d928c584941",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "\"Trẻ con sa mạc truyền tai nhau bài đồng dao Xương rồng đơm lá đơm hoa Nước đong đầy trên cao nguyên đá Là ngày hoàng đế trở về nhà! Người Shurima luôn mơ về thời khắc tái sinh của nhà vua Và cuối cùng điều đó cũng trở thành sự thật!\"",
+        "payloadType": "str",
+        "x": 150,
+        "y": 1880,
+        "wires": [
+            [
+                "e92fb782fb968d74"
+            ]
+        ]
+    },
+    {
+        "id": "e92fb782fb968d74",
+        "type": "http request",
+        "z": "12920d928c584941",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://www.pushsafer.com/api?k=jKccxcmEgrTvH2Fw9uDY&m={{payload}}",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 370,
+        "y": 1880,
+        "wires": [
+            []
+        ]
     },
     {
         "id": "1699667209f7a5bd",
@@ -1331,6 +1690,14 @@
         "width": "6",
         "collapse": false,
         "className": ""
+    },
+    {
+        "id": "1cf20dbbdb97e156",
+        "type": "mongodb3",
+        "uri": "mongodb+srv://ngocAnhDo26:26022004@cluster0.1xkby.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
+        "name": "AutomaticDoor",
+        "options": "",
+        "parallelism": "-1"
     },
     {
         "id": "8906270f2889dfd3",
