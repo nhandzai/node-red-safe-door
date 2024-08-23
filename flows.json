@@ -23,12 +23,15 @@
             "8d109ebe53881ce8",
             "14fb12c22f493dac",
             "bdc661eaf5b3f902",
-            "2cfec57726334544"
+            "2cfec57726334544",
+            "f329337996e31ab3",
+            "91d4cae595d2fe2c",
+            "d95239f105d8822c"
         ],
-        "x": 94,
+        "x": 74,
         "y": 499,
-        "w": 532,
-        "h": 242
+        "w": 592,
+        "h": 262
     },
     {
         "id": "13be58712d45bdd9",
@@ -318,8 +321,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 170,
-        "y": 660,
+        "x": 150,
+        "y": 600,
         "wires": [
             [
                 "2cfec57726334544"
@@ -332,17 +335,20 @@
         "z": "12920d928c584941",
         "g": "063a305f48ec89cd",
         "name": "OUTPUT_CLOUD_TK_MK",
-        "func": "let TK_MK_LIST = flow.get(\"TK_MK_LIST\") || {};\nlet IS_LOGIN = flow.get(\"IS_LOGIN\") || false;\n\nlet TK_NEW = flow.get(\"TK_NEW\") || \"\";\nlet MK_NEW = flow.get(\"MK_NEW\") || \"\";\n\n\nif (TK_MK_LIST[TK_NEW]) {\n    msg.payload = `Tài khoản ${TK_NEW} đã tồn tại!`;\n} else {\n    TK_MK_LIST[TK_NEW] = MK_NEW;\n    flow.set(\"danhSachTKMK\", TK_MK_LIST);\n    msg.payload = `Đã thêm tài khoản: ${TK_NEW} với mật khẩu: ${MK_NEW}`;\n}\n\nreturn msg;\n",
+        "func": "let TK_MK_LIST = flow.get(\"TK_MK_LIST\") || {};\nlet IS_LOGIN = flow.get(\"IS_LOGIN\") || false;\n\nlet TK_NEW = flow.get(\"TK_NEW\") || \"\";\nlet MK_NEW = flow.get(\"MK_NEW\") || \"\";\nlet ROLE_NEW = \"guest\"\n\nlet existingUser = TK_MK_LIST.find(function(user) {\n    return user.username === TK_NEW;\n});\n\nif (existingUser) {\n    msg.payload = `Account ${TK_NEW} already exists !`;\n} else {\n    TK_MK_LIST.push({\n        username: TK_NEW,\n        password: MK_NEW,\n        role: ROLE_NEW\n    });\n    \n    flow.set(\"TK_MK_LIST\", TK_MK_LIST);\n    msg.payload = `New account is added`;\n}\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 380,
-        "y": 700,
+        "x": 260,
+        "y": 660,
         "wires": [
-            []
+            [
+                "f329337996e31ab3",
+                "91d4cae595d2fe2c"
+            ]
         ]
     },
     {
@@ -554,7 +560,7 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 250,
+        "x": 430,
         "y": 1280,
         "wires": []
     },
@@ -575,7 +581,7 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 230,
+        "x": 410,
         "y": 1220,
         "wires": []
     },
@@ -596,7 +602,7 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 230,
+        "x": 410,
         "y": 1340,
         "wires": []
     },
@@ -606,7 +612,7 @@
         "z": "12920d928c584941",
         "g": "315983a64646b7fb",
         "name": "CHECK_TK_MK",
-        "func": "var TK = flow.get('TK') || '';\nvar MK = flow.get('MK') || '';\nvar TK_MK_LIST = flow.get(\"TK_MK_LIST\") || [];\n\nvar user = TK_MK_LIST.find(function(user) {\n    return user.username === TK && user.password === MK;\n});\n\nif (user) {\n    flow.set(\"IS_LOGIN\", true);\n    flow.set(\"role\", user.role); \n    msg.payload = \"Đăng nhập thành công!\";\n} else {\n    flow.set(\"IS_LOGIN\", false);\n    flow.set(\"role\", \"\"); \n    msg.payload = \"Tài khoản hoặc mật khẩu không chính xác!\";\n}\n\nreturn msg;\n",
+        "func": "var TK = flow.get('TK') || '';\nvar MK = flow.get('MK') || '';\nvar TK_MK_LIST = flow.get(\"TK_MK_LIST\") || [];\n\nvar user = TK_MK_LIST.find(function(user) {\n    return user.username === TK && user.password === MK;\n});\n\nif (user) {\n    flow.set(\"IS_LOGIN\", true);\n    flow.set(\"ROLE\", user.role); \n    msg.payload = \"Login successful!\";\n} else {\n    flow.set(\"IS_LOGIN\", false);\n    flow.set(\"ROLE\", \"\"); \n    msg.payload = \"Wrong password or username!\";\n}\n\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -710,8 +716,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 240,
-        "y": 1440,
+        "x": 420,
+        "y": 1100,
         "wires": [
             []
         ]
@@ -744,14 +750,14 @@
         "z": "12920d928c584941",
         "g": "e6fe9048638cc085",
         "name": "CHECK_ABLE_TAB",
-        "func": "let IS_LOGIN = flow.get(\"IS_LOGIN\") || false;\nlet role = flow.get(\"role\") || ''; \n\nif (IS_LOGIN) {\n    msg.payload = {\n        tabs: {\n            \"enable\": [\"Dashboard\"],\n        }\n    };\n\n    if (role === \"admin\") {\n        msg.payload.tabs.enable.push(\"Settings\"); \n    }\n    else\n    {\n    msg.payload = {\n        tabs: {\n            \"disable\": [\"Settings\"]\n        }\n    };\n    }\n}\n\nreturn msg;\n",
+        "func": "let IS_LOGIN = flow.get(\"IS_LOGIN\") || false;\nlet role = flow.get(\"ROLE\") || ''; \n\nif (IS_LOGIN) {\n    msg.payload = {\n        tabs: {\n            \"enable\": [\"Dashboard\"],\n        }\n    };\n\n    if (role === \"admin\") {\n        msg.payload.tabs.enable.push(\"Settings\"); \n    }\n    else\n    {\n    msg.payload = {\n        tabs: {\n            \"disable\": [\"Settings\"]\n        }\n    };\n    }\n}\n\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 240,
+        "x": 320,
         "y": 440,
         "wires": [
             [
@@ -807,7 +813,7 @@
         "correl": "",
         "expiry": "",
         "broker": "fd12eae5430e069a",
-        "x": 480,
+        "x": 520,
         "y": 1600,
         "wires": []
     },
@@ -827,7 +833,7 @@
         "y": 1100,
         "wires": [
             [
-                "ff12afbdce829a0f"
+                "deaf4e63997158fd"
             ]
         ]
     },
@@ -938,6 +944,263 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "9e409b48861ea81a",
+        "type": "ui_switch",
+        "z": "12920d928c584941",
+        "name": "",
+        "label": "Always OPEN",
+        "tooltip": "",
+        "group": "7d15fe7f4915f2ee",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 240,
+        "y": 1660,
+        "wires": [
+            [
+                "7e895bdc382ad0b1"
+            ]
+        ]
+    },
+    {
+        "id": "1af28acc72ef52f7",
+        "type": "ui_switch",
+        "z": "12920d928c584941",
+        "name": "",
+        "label": "Light ON",
+        "tooltip": "",
+        "group": "7d15fe7f4915f2ee",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 220,
+        "y": 1720,
+        "wires": [
+            [
+                "725a8692a3d38c1d"
+            ]
+        ]
+    },
+    {
+        "id": "e8936a700e218380",
+        "type": "ui_switch",
+        "z": "12920d928c584941",
+        "name": "",
+        "label": "Notifications ON",
+        "tooltip": "",
+        "group": "7d15fe7f4915f2ee",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 240,
+        "y": 1780,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "98c3a310f501f539",
+        "type": "mqtt in",
+        "z": "12920d928c584941",
+        "name": "",
+        "topic": "/22127303/flag/doorLight",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "fd12eae5430e069a",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 150,
+        "y": 1220,
+        "wires": [
+            [
+                "289b0a913e5a7c1c"
+            ]
+        ]
+    },
+    {
+        "id": "4e9b55b641c9bbd0",
+        "type": "mqtt in",
+        "z": "12920d928c584941",
+        "name": "",
+        "topic": "/22127010/flag/peopleDetected",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "fd12eae5430e069a",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 170,
+        "y": 1280,
+        "wires": [
+            [
+                "5201ecc8045b09fc"
+            ]
+        ]
+    },
+    {
+        "id": "8e3650fadfb45fc1",
+        "type": "mqtt in",
+        "z": "12920d928c584941",
+        "name": "",
+        "topic": "/22127303/flag/peopleDetected",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "fd12eae5430e069a",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 170,
+        "y": 1340,
+        "wires": [
+            [
+                "7cc0802acb3c5992"
+            ]
+        ]
+    },
+    {
+        "id": "7e895bdc382ad0b1",
+        "type": "mqtt out",
+        "z": "12920d928c584941",
+        "name": "",
+        "topic": "/22127010/flag/alwaysOpen",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "fd12eae5430e069a",
+        "x": 520,
+        "y": 1660,
+        "wires": []
+    },
+    {
+        "id": "725a8692a3d38c1d",
+        "type": "mqtt out",
+        "z": "12920d928c584941",
+        "name": "",
+        "topic": "/22127010/flag/alwaysLightOn",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "fd12eae5430e069a",
+        "x": 530,
+        "y": 1720,
+        "wires": []
+    },
+    {
+        "id": "f329337996e31ab3",
+        "type": "ui_toast",
+        "z": "12920d928c584941",
+        "g": "063a305f48ec89cd",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 530,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "91d4cae595d2fe2c",
+        "type": "function",
+        "z": "12920d928c584941",
+        "g": "063a305f48ec89cd",
+        "name": "SHOW_TK_MK",
+        "func": "let role = flow.get(\"ROLE\") || ''; \nif(role == 'admin')\n{\n    msg.payload = flow.get(\"TK_MK_LIST\") || {};\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 720,
+        "wires": [
+            [
+                "d95239f105d8822c"
+            ]
+        ]
+    },
+    {
+        "id": "d95239f105d8822c",
+        "type": "ui_table",
+        "z": "12920d928c584941",
+        "g": "063a305f48ec89cd",
+        "group": "98d4f436e2bef99f",
+        "name": "",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "columns": [],
+        "outputs": 0,
+        "cts": false,
+        "x": 590,
+        "y": 720,
+        "wires": []
     },
     {
         "id": "1699667209f7a5bd",
@@ -1053,6 +1316,17 @@
         "name": "1",
         "tab": "27133f1f04c8b028",
         "order": 1,
+        "disp": false,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "7d15fe7f4915f2ee",
+        "type": "ui_group",
+        "name": "2",
+        "tab": "27133f1f04c8b028",
+        "order": 2,
         "disp": false,
         "width": "6",
         "collapse": false,
